@@ -1,0 +1,17 @@
+﻿<Page x:Class="HC3_A2.deposit2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="deposit2" Width="638.666" Height="464">
+
+    <Grid Margin="0,0,-0.333,0" Background="White">
+        <TextBlock HorizontalAlignment="Left" Margin="119,52,0,0" TextWrapping="Wrap" Text="Insert Cash Or Cheque" VerticalAlignment="Top" FontSize="36" Height="49" Width="379"/>
+        <Button Content="card insert simulation" HorizontalAlignment="Left" Margin="119,158,0,0" VerticalAlignment="Top" Width="379" Height="41"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="96,287,0,0" VerticalAlignment="Top" Width="95" Height="51" Click="BackButton"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="427,287,0,0" VerticalAlignment="Top" Width="95" Height="51" Click="OkButton"/>
+
+    </Grid>
+</Page>
