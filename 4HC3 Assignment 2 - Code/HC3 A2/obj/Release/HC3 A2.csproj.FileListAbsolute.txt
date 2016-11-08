@@ -1,0 +1,71 @@
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\bin\Release\HC3 A2.exe.config
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\bin\Release\HC3 A2.exe
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\bin\Release\HC3 A2.pdb
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\MainWindow.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page1 - Welcome.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page2 - PIN.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page3 - Accounts.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page4 - Transfer.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page5 - Deposit.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\App.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3 A2_MarkupCompile.cache
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3 A2_MarkupCompile.lref
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\MainWindow.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page1 - Welcome.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page2 - PIN.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page3 - Accounts.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page4 - Transfer.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page5 - Deposit.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3 A2.g.resources
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3_A2.Properties.Resources.resources
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3 A2.csproj.GenerateResource.Cache
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3 A2.exe
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\HC3 A2.pdb
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page6 - Confirm.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page7 - Complete.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page6 - Confirm.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page7 - Complete.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page10.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page11.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page12.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page13.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page14.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page8.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page9.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page10.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page11.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page12.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page13.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page14.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page8.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\HC3 A2\HC3 A2\obj\Release\Page9.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\bin\Release\HC3 A2.exe.config
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3 A2.exe
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3 A2.pdb
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\bin\Release\HC3 A2.exe
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\bin\Release\HC3 A2.pdb
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\MainWindow.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page10.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page11.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page12.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page13.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page14.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page08.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page09.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\App.g.cs
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3 A2_MarkupCompile.cache
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3 A2_MarkupCompile.lref
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\MainWindow.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page10.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page11.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page12.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page13.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page14.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page08.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\Page09.baml
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3 A2.g.resources
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3_A2.Properties.Resources.resources
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2\HC3 A2\obj\Release\HC3 A2.csproj.GenerateResource.Cache
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2 - Code\HC3 A2\bin\Release\HC3 A2.exe.config
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2 - Code\HC3 A2\obj\Release\HC3 A2.exe
+C:\Users\khang\Documents\School Work\HC3\Assignment 2\4HC3 Assignment 2 - Code\HC3 A2\obj\Release\HC3 A2.pdb
