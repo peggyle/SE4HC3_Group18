@@ -24,7 +24,7 @@ namespace HC3_A2
         {
             InitializeComponent();
 
-            frame.NavigationService.Navigate(new HC3_A2.Page1());
+            frame.NavigationService.Navigate(new HC3_A2.InsertCard());
         }
     }
 }

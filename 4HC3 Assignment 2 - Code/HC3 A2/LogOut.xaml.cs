@@ -58,7 +58,7 @@ namespace HC3_A2
 
         private void insertCardClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.Page1());
+            this.NavigationService.Navigate(new HC3_A2.InsertCard());
         }
     }
 }

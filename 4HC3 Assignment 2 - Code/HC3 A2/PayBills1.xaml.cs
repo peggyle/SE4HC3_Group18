@@ -50,14 +50,14 @@ namespace HC3_A2
             // Null check
             if (fromAccount != null && toAccount != null)
                 // Navigate to next page (choose amount page)
-                this.NavigationService.Navigate(new HC3_A2.Page9( fromAccount.ToString(), toAccount.ToString() ));
+                this.NavigationService.Navigate(new HC3_A2.Transfer2( fromAccount.ToString(), toAccount.ToString() ));
             else
                 // Display error
                 errorMsg.Visibility = Visibility.Visible;
         }
         private void back_click(object sender, RoutedEventArgs e) {
             // Navigate to main page
-            this.NavigationService.Navigate(new HC3_A2.Page4());
+            this.NavigationService.Navigate(new HC3_A2.MainPage());
         }
     }
 }

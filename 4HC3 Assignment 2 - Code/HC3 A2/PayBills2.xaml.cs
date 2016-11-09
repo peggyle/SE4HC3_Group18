@@ -38,14 +38,14 @@ namespace HC3_A2
             // Null check
             if (amount.Length > 2)
                 // Continue to confirm page
-                this.NavigationService.Navigate(new HC3_A2.Page10(fromAccount, toAccount, amount));
+                this.NavigationService.Navigate(new HC3_A2.Transfer3(fromAccount, toAccount, amount));
             else
                 errorMsg.Visibility = Visibility.Visible;
         }
         private void back_click(object sender, RoutedEventArgs e)
         {
             // Return to account selection page
-            this.NavigationService.Navigate(new HC3_A2.Page8());
+            this.NavigationService.Navigate(new HC3_A2.Transfer1());
         }
 
         // Number pad

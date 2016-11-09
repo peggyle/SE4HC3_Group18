@@ -40,7 +40,7 @@ namespace HC3_A2
 
         private void Button_Back(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HC3_A2.Page4());
+            NavigationService.Navigate(new HC3_A2.MainPage());
         }
     }
 }

@@ -33,7 +33,7 @@ namespace HC3_A2
 
         private void button_click_1(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Page4());
+            this.NavigationService.Navigate(new MainPage());
         }
 
     }

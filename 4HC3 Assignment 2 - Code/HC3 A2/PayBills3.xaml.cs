@@ -40,11 +40,11 @@ namespace HC3_A2
         // Buttons
         private void ok_click(object sender, RoutedEventArgs e) {
             // Continue to success page
-            this.NavigationService.Navigate(new HC3_A2.Page11());
+            this.NavigationService.Navigate(new HC3_A2.Success());
         }
         private void back_click(object sender, RoutedEventArgs e) {
             // Return to amount selection page
-            this.NavigationService.Navigate(new HC3_A2.Page9(fromAccount, toAccount));
+            this.NavigationService.Navigate(new HC3_A2.Transfer2(fromAccount, toAccount));
         }
     }
 }
