@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HC3_A2
+namespace TEST
 {
     /// <summary>
     /// Interaction logic for changePin3.xaml
@@ -33,7 +33,8 @@ namespace HC3_A2
 
         private void button_click_1(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new MainPage());
+            CheckAccount1 MoreActions = new CheckAccount1();
+            this.NavigationService.Navigate(MoreActions);
         }
 
     }

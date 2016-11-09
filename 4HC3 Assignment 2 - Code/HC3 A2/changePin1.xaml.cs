@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HC3_A2
+namespace TEST
 {
     /// <summary>
     /// Interaction logic for changePin1.xaml
@@ -24,22 +24,14 @@ namespace HC3_A2
         {
             InitializeComponent();
         }
-
-        private void checkBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
         private void button_click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.MainPage());
+            CheckAccount1 back = new CheckAccount1();
+            this.NavigationService.Navigate(back);
         }
         private void button_click_1(object sender, RoutedEventArgs e)
         {
-            changePin2 next = new changePin2();
-            this.NavigationService.Navigate(next);
-        }
-        private void button_Next(object sender, RoutedEventArgs e)
-        {
+            
             changePin2 next = new changePin2();
             this.NavigationService.Navigate(next);
         }
@@ -47,7 +39,28 @@ namespace HC3_A2
         {
 
         }
+/*
+        private void checkBox_Checked1(object sender, RoutedEventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                checkBox2.Checked == false; checkBox3.Checked == false; checkBox4 == false;
+            }
+        }
 
-       
+        private void checkBox_Checked2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void checkBox_Checked3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void checkBox_Checked4(object sender, RoutedEventArgs e)
+        {
+
+        }*/
     }
 }

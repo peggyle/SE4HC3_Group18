@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HC3_A2
+namespace TEST
 {
     /// <summary>
     /// Interaction logic for Page1.xaml
@@ -27,7 +27,8 @@ namespace HC3_A2
 
         private void button_click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.MainPage());
+            CheckAccount2 p2 = new CheckAccount2();
+            this.NavigationService.Navigate(p2);
         }
         private void button_click_1(object sender, RoutedEventArgs e)
         {
