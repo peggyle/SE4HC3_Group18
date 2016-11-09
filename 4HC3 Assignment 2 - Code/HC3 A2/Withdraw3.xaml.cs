@@ -20,9 +20,15 @@ namespace HC3_A2
     /// </summary>
     public partial class Withdraw3 : Page
     {
-        public Withdraw3()
+    
+        private string amount; 
+        
+        public Withdraw3(string amount)
         {
             InitializeComponent();
+            
+            this.amount = mount; 
+            numberLabel.Text = amount; 
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
