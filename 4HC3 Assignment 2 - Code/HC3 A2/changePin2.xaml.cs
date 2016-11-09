@@ -35,19 +35,14 @@ namespace HC3_A2
 
         private void button_click(object sender, RoutedEventArgs e)
         {
-            if(textBox1.Text.Length==0 || textBox2.Text.Length == 0|| textBox3.Text.Length == 0|| textBox4.Text.Length == 0|| textBox5.Text.Length == 0|| textBox6.Text.Length == 0|| textBox7.Text.Length == 0|| textBox8.Text.Length == 0)
+            if(textBox1.Text.Length==0 || textBox2.Text.Length == 0|| textBox3.Text.Length == 0|| textBox4.Text.Length == 0)
             {
                 MessageBox.Show("Change PIN is not complete",
-                 "Important Message");
-
-            }else if(textBox1.Text== textBox5.Text&& textBox2.Text== textBox6.Text&& textBox3.Text== textBox7.Text&& textBox4.Text== textBox8.Text)
-            {
-                MessageBox.Show("You can not change to the same PIN",
                  "Important Message");
             }
             else
             { 
-            changePin3 confirm = new changePin3();
+            changePin4 confirm = new changePin4();
             this.NavigationService.Navigate(confirm);
             }
         }
@@ -57,11 +52,7 @@ namespace HC3_A2
             
             if (button.CommandParameter.ToString()== "BACK")
             {
-                if(textBox8.Text.Length > 0) textBox8.Text = textBox8.Text.Remove(textBox8.Text.Length - 1);
-                else if(textBox7.Text.Length > 0) textBox7.Text = textBox7.Text.Remove(textBox7.Text.Length - 1);
-                else if(textBox6.Text.Length > 0) textBox6.Text = textBox6.Text.Remove(textBox6.Text.Length - 1);
-                else if(textBox5.Text.Length > 0) textBox5.Text = textBox5.Text.Remove(textBox5.Text.Length - 1);
-                else if(textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
+                if(textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
                 else if(textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
                 else if(textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
                 else if(textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
@@ -73,35 +64,23 @@ namespace HC3_A2
             }
             else if (textBox1.Text.Length == 0)
             {
-                textBox1.Text += button.Content.ToString();
+               // textBox1.Text += button.Content.ToString();
+                textBox1.Text += "♦";
             }
             else if(textBox2.Text.Length == 0)
             {
-                textBox2.Text += button.Content.ToString();
+               // textBox2.Text += button.Content.ToString();
+                textBox2.Text += "♦";
             }
             else if (textBox3.Text.Length == 0)
             {
-                textBox3.Text += button.Content.ToString();
+               // textBox3.Text += button.Content.ToString();
+                textBox3.Text += "♦";
             }
             else if (textBox4.Text.Length == 0)
             {
-                textBox4.Text += button.Content.ToString();
-            }
-            else if (textBox5.Text.Length == 0)
-            {
-                textBox5.Text += button.Content.ToString();
-            }
-            else if (textBox6.Text.Length == 0)
-            {
-                textBox6.Text += button.Content.ToString();
-            }
-            else if (textBox7.Text.Length == 0)
-            {
-                textBox7.Text += button.Content.ToString();
-            }
-            else if (textBox8.Text.Length == 0)
-            {
-                textBox8.Text += button.Content.ToString();
+               // textBox4.Text += button.Content.ToString();
+                textBox4.Text += "♦";
             }
             else
             {
