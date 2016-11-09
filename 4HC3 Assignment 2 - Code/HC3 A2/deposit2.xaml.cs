@@ -25,16 +25,38 @@ namespace HC3_A2
             InitializeComponent();
         }
 
-        private void OkButton(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
-
-        }
-
-        private void BackButton(object sender, RoutedEventArgs e)
+        private void back_Button(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HC3_A2.deposit());
         }
+
+        private void OkButton(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
+        }
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+      
     }
 
 }

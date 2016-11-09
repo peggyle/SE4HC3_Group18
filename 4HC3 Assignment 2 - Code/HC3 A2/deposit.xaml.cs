@@ -27,9 +27,8 @@ namespace HC3_A2
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            combox.SelectedItem = "SAVING ACCOUNT";
-            combox.SelectedItem = "CHEQUEING ACCOUNT";
-            this.NavigationService.Navigate(new HC3_A2.deposit2());
+            
+            
 
         }
 
@@ -38,9 +37,28 @@ namespace HC3_A2
             NavigationService.Navigate(new HC3_A2.deposit2());
         }
 
-        private void Button_Back(object sender, RoutedEventArgs e)
+        private void back_Button(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HC3_A2.MainPage());
+            this.NavigationService.Navigate(new HC3_A2.MainPage());
+
         }
+
+
+
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+
     }
 }
