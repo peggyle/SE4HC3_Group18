@@ -105,7 +105,7 @@ namespace HC3_A2
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
             string amount = digitDisplay.Text; 
-            this.NavigationService.Navigate(new HC3_A2.Withdraw3());
+            this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount));
         }
 
         private void TextFold(object sender, TextChangedEventArgs e)
