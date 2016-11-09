@@ -3,35 +3,40 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d"
-	Title="Page2" Width="684.754" Height="504.968">
+      xmlns:local="clr-namespace:HC3_A2"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+	Title="Page2">
 
     <Grid>
-        <Frame Content="" HorizontalAlignment="Left" Height="515" VerticalAlignment="Top" Width="684" Margin="-1,-11,0,0" Background="White" Navigated="Frame_Navigated" RenderTransformOrigin="0.5,0.5">
-            <Frame.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.572"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Frame.RenderTransform>
-        </Frame>
-        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Left" Margin="472,375,0,0" VerticalAlignment="Top" Width="95" FontSize="20" Height="66" Click="OKButton_Click"/>
-        <Button x:Name="BackButton" Content="BACK" HorizontalAlignment="Left" Margin="65,375,0,0" VerticalAlignment="Top" Width="92" Height="66" FontSize="20" Click="BackButton_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="29,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="199" FontSize="40"><Run Text="AMOUNT"/></TextBlock>
-        <TextBox x:Name="textbox" HorizontalAlignment="Left" Height="58" Margin="233,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" TextChanged="TextFold" FlowDirection="RightToLeft" FontSize="22"/>
-        <Button x:Name ="button1" Content="1" HorizontalAlignment="Left" Margin="76,112,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button1_Click"/>
-        <Button x:Name ="button2" Content="2" HorizontalAlignment="Left" Margin="214,112,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button2_Click"/>
-        <Button x:Name ="button3" Content="3" HorizontalAlignment="Left" Margin="352,112,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button3_Click" RenderTransformOrigin="0.42,0.447"/>
-        <Button x:Name ="button4" Content="4" HorizontalAlignment="Left" Margin="76,170,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button4_Click"/>
-        <Button x:Name ="button5" Content="5" HorizontalAlignment="Left" Margin="214,170,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button5_Click"/>
-        <Button x:Name ="button6" Content="6" HorizontalAlignment="Left" Margin="352,170,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button6_Click"/>
-        <Button x:Name ="button7" Content="7" HorizontalAlignment="Left" Margin="76,228,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button7_Click"/>
-        <Button x:Name ="button8" Content="8" HorizontalAlignment="Left" Margin="214,228,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button8_Click"/>
-        <Button x:Name ="button9" Content="9" HorizontalAlignment="Left" Margin="352,228,0,0" VerticalAlignment="Top" Width="138" Height="58" FontSize="35" Click="Button9_Click"/>
-        <Button x:Name ="button0" Content="0" HorizontalAlignment="Left" Margin="76,286,0,0" VerticalAlignment="Top" Width="414" Height="58" FontSize="35" Click="Button0_Click"/>
-        <Button x:Name ="Delete" Content="Del" HorizontalAlignment="Left" Margin="490,112,0,0" VerticalAlignment="Top" Width="77" Height="232" FontSize="35" Click="Delete_Click"/>
+        <Rectangle Fill="#A349A4" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Withdraw"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter amount:"  Margin="0,100,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="textbox" HorizontalAlignment="Center" Height="58" Margin="0,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="281" TextChanged="TextFold" FlowDirection="RightToLeft" FontSize="22" TextAlignment="Center"/>
+        <Button x:Name ="button1" Content="1" HorizontalAlignment="Left" Margin="157,240,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button1_Click"/>
+        <Button x:Name ="button2" Content="2" HorizontalAlignment="Left" Margin="295,240,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button2_Click"/>
+        <Button x:Name ="button3" Content="3" HorizontalAlignment="Left" Margin="433,240,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button3_Click" RenderTransformOrigin="0.42,0.447"/>
+        <Button x:Name ="button4" Content="4" HorizontalAlignment="Left" Margin="157,290,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button4_Click"/>
+        <Button x:Name ="button5" Content="5" HorizontalAlignment="Left" Margin="295,290,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button5_Click"/>
+        <Button x:Name ="button6" Content="6" HorizontalAlignment="Left" Margin="433,290,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button6_Click"/>
+        <Button x:Name ="button7" Content="7" HorizontalAlignment="Left" Margin="157,340,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button7_Click"/>
+        <Button x:Name ="button8" Content="8" HorizontalAlignment="Left" Margin="295,340,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button8_Click"/>
+        <Button x:Name ="button9" Content="9" HorizontalAlignment="Left" Margin="433,340,0,0" VerticalAlignment="Top" Width="138" Height="50" FontSize="30" Click="Button9_Click"/>
+        <Button x:Name ="button0" Content="0" HorizontalAlignment="Left" Margin="157,390,0,0" VerticalAlignment="Top" Width="414" Height="50" FontSize="30" Click="Button0_Click"/>
+        <Button x:Name ="Delete" Content="Del" HorizontalAlignment="Left" Margin="571,240,0,0" VerticalAlignment="Top" Width="77" Height="200" FontSize="30" Click="Delete_Click"/>
+
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="BackButton_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="OKButton_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>
