@@ -33,59 +33,68 @@ namespace HC3_A2
   
 
 
-        private void Button1_Click(object sender, RoutedEventArgs e)
+            private void number1_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 1; 
+            digitDisplay.Text = digitDisplay.Text + 1;
         }
 
-        private void Button2_Click(object sender, RoutedEventArgs e)
+        private void number2_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 2; 
+            digitDisplay.Text = digitDisplay.Text + 2;
         }
 
-        private void Button3_Click(object sender, RoutedEventArgs e)
+        private void number3_click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 3;
+            digitDisplay.Text = digitDisplay.Text + 3;
+        }
+        
+        private void number4_Click(object sender, RoutedEventArgs e)
+        {
+            digitDisplay.Text = digitDisplay.Text + 4; 
         }
 
-        private void Button4_Click(object sender, RoutedEventArgs e)
+        private void number5_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 4;
+            digitDisplay.Text = digitDisplay.Text + 5;
         }
 
-        private void Button5_Click(object sender, RoutedEventArgs e)
+      
+
+        private void number6_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 5;
+            digitDisplay.Text = digitDisplay.Text + 6;
         }
 
-        private void Button6_Click(object sender, RoutedEventArgs e)
+        private void number7_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 6;
+            digitDisplay.Text = digitDisplay.Text + 7;
         }
 
-        private void Button7_Click(object sender, RoutedEventArgs e)
+        private void number8_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 7;
+            digitDisplay.Text = digitDisplay.Text + 8;
         }
 
-        private void Button8_Click(object sender, RoutedEventArgs e)
+        private void number9_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 8;
+            digitDisplay.Text = digitDisplay.Text + 9;
         }
 
-        private void Button9_Click(object sender, RoutedEventArgs e)
+        private void number0_Click(object sender, RoutedEventArgs e)
         {
-            textbox.Text = textbox.Text + 9;
+            digitDisplay.Text = digitDisplay.Text + 0;
         }
 
-        private void Button0_Click(object sender, RoutedEventArgs e)
-        {
-            textbox.Text = textbox.Text + 0;
         }
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
+        private void number_click(object sender, RoutedEventArgs e)
         {
-            textbox.Clear();
+            digitDisplay.Text = digitDisplay.Text + "."; 
+        }
+
+        private void delete_click(object sender, RoutedEventArgs e)
+        {
+            digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
