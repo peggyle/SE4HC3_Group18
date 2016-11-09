@@ -9,43 +9,80 @@
       Title="Page2">
 
     <Grid>
-        <Label x:Name="lable1" Content="Account:" HorizontalAlignment="Left" Height="66" Margin="44,59,0,0" VerticalAlignment="Top" Width="225" FontFamily="Arial" FontSize="36"/>
-        <TextBox x:Name="textBox" IsReadOnly="True" HorizontalAlignment="Left" Height="63" Margin="226,57,0,0" TextWrapping="Wrap" Text="CHEQUING" VerticalAlignment="Top" Width="497" FontSize="36"/>
-        <Label x:Name="label" Content="Balance:" HorizontalAlignment="Left" Margin="44,130,0,0" VerticalAlignment="Top" Height="64" Width="172" FontSize="36" FontFamily="Arial"/>
-        <TextBox x:Name="textBox1" IsReadOnly="True" HorizontalAlignment="Left" Height="64" Margin="226,130,0,0" TextWrapping="Wrap" Text="1600.50" VerticalAlignment="Top" Width="497" FontSize="36"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="199" Margin="44,251,0,0" VerticalAlignment="Top" Width="679" SelectionChanged="listBox_SelectionChanged">
-            <ListBoxItem Content="Nov 07, 2016          ROGERS CABLE                                 80.00                                                                    1600.50" Height="20"/>
-            <ListBoxItem Content="Nov 05, 2016 &#x9;  HOUSE OF GAME                              78.00                                                                    1678.50&#xD;&#xA;" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
-            <ListBoxItem Content="content" Height="20"/>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Check Account Statements"  Margin="15,15,0,0" FontSize="45" FontFamily="Arial" Foreground="White"/>
+
+        <Label x:Name="lable1" Content="Account:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,100,0,0" FontSize="30" FontFamily="Arial"/>
+        <TextBox x:Name="textBox" IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Margin="60,95,0,0" Text="Account X" Width="497" FontSize="30" VerticalContentAlignment="Center"/>
+        <Label x:Name="label" Content="Balance:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,160,0,0" FontSize="30" FontFamily="Arial"/>
+        <TextBox x:Name="textBox1" IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Margin="60,155,0,0" Text="$XXX.XX" Width="497" FontSize="30" VerticalContentAlignment="Center"/>
+
+        <ListBox x:Name="listBox" HorizontalAlignment="Center" VerticalAlignment="Top" Height="200" Margin="0,240,0,0"  Width="680" SelectionChanged="listBox_SelectionChanged">
+            <ListBoxItem Content="Nov 07, 2016       ROGERS CABLE                                     -$80.00                        1600.50"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="Nov 08, 2016       HOUSE OF GAME                                   -$78.00                        1522.50"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="Nov 10, 2016       CASH DEPOSIT                                      +$100.00                      1622.50"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="Nov 12, 2016       INTEREST PAID                                      +$0.02                          1622.52"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+                         FontSize="15" FontFamily="Arial"/>
+            <!--
             <ListBoxItem Content="content" Height="20"/>
             <ListBoxItem Content="content" Height="20"/>
             <ListBoxItem Content="This is the end"/>
+            -->
         </ListBox>
 
-        <Label x:Name="label1" Content="Date" HorizontalAlignment="Left" Height="28" Margin="44,223,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
-        <Label x:Name="label1_Copy" Content="Transaction Description" HorizontalAlignment="Left" Height="28" Margin="152,223,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold"/>
-        <Label x:Name="label1_Copy1" Content="Withdrawals" HorizontalAlignment="Left" Height="28" Margin="344,223,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
-        <Label x:Name="label1_Copy2" Content="Deposits" HorizontalAlignment="Left" Height="28" Margin="477,223,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
-        <Label x:Name="label1_Copy3" Content="Balance" HorizontalAlignment="Left" Height="28" Margin="595,223,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
-        <Button x:Name="button_back" Content="Back" HorizontalAlignment="Left" Margin="44,498,0,0" VerticalAlignment="Top" Width="97" Height="50" FontFamily="Arial Black" FontSize="18" Click="button_back_Click">
+        <!--
+        <Label x:Name="label1" Content="Date" HorizontalAlignment="Left" Height="28" Margin="44,210,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
+        <Label x:Name="label1_Copy" Content="Transaction Description" HorizontalAlignment="Left" Height="28" Margin="152,210,0,0" VerticalAlignment="Top" Width="146" FontWeight="Bold"/>
+        <Label x:Name="label1_Copy1" Content="Withdrawals" HorizontalAlignment="Left" Height="28" Margin="344,210,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
+        <Label x:Name="label1_Copy2" Content="Deposits" HorizontalAlignment="Left" Height="28" Margin="477,210,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
+        <Label x:Name="label1_Copy3" Content="Balance" HorizontalAlignment="Left" Height="28" Margin="595,210,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold"/>
+        -->
+        <Label x:Name="label1" Content="Date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,210,0,0" FontSize="18" FontFamily="Arial"/>
+        <Label x:Name="label2" Content="Transaction Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="175,210,0,0" FontSize="18" FontFamily="Arial"/>
+        <Label x:Name="label3" Content="Change" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="450,210,0,0" FontSize="18" FontFamily="Arial"/>
+        <Label x:Name="label4" Content="Balance" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,210,0,0" FontSize="18" FontFamily="Arial"/>
+        
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="button_back_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="button_print" Content="Print" HorizontalAlignment="Left" Margin="628,495,0,0" VerticalAlignment="Top" Width="95" Height="53" FontFamily="Arial Black" FontSize="18" Click="button_print_Click">
+        <Button x:Name="okButton" Content="Print" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="button_print_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

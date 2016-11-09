@@ -27,13 +27,13 @@ namespace HC3_A2
 
         private void button2_click(object sender, RoutedEventArgs e)
         {
-            CheckAccount1 logout = new CheckAccount1();
+            LogOut logout = new LogOut();
             this.NavigationService.Navigate(logout);
         }
 
         private void button_click(object sender, RoutedEventArgs e)
         {
-            changePin1 MoreActions = new changePin1();
+            MainPage MoreActions = new MainPage();
             this.NavigationService.Navigate(MoreActions);
         }
 

@@ -9,31 +9,33 @@
       Title="changePin1">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="21*"/>
-            <ColumnDefinition Width="139*"/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="Change PIN" HorizontalAlignment="Left" Height="56" Margin="74,58,0,0" VerticalAlignment="Top" Width="266" FontFamily="Arial" FontSize="36" Grid.ColumnSpan="2"/>
-        <Label x:Name="label1" Content="Please choose security Question from below" HorizontalAlignment="Left" Height="26" Margin="74,138,0,0" VerticalAlignment="Top" Width="341" FontFamily="Arial" FontSize="16" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="SecurityQuestionDropDown" HorizontalAlignment="Left" Height="55" Margin="74,169,0,0" VerticalAlignment="Top" FontSize="28" FontFamily="Arial" Width="627" SelectionChanged="comboBox_SelectionChanged" Grid.ColumnSpan="2">
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Change PIN"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Choose a security question"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+
+        <ComboBox x:Name="SecurityQuestionDropDown" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="60" Margin="0,175,0,0"  FontSize="28" FontFamily="Arial" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem Content="Question1: xxxxxxxxxxxxxxxxxxxxxxxxxxxx" HorizontalAlignment="Left" Width="608" FontSize="24" FontFamily="Arial"/>
             <ComboBoxItem Content="Question2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" HorizontalAlignment="Left" Width="608" FontSize="24" FontFamily="Arial"/>
         </ComboBox>
-        <Button x:Name="button_Back" Content="Back" HorizontalAlignment="Left" Margin="74,494,0,0" VerticalAlignment="Top" Width="161" Click="button_click" Height="72" FontSize="18" FontFamily="Arial Black" FontWeight="Bold" Grid.ColumnSpan="2">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
 
-        <Button x:Name="button" Content="Next" HorizontalAlignment="Left" Margin="438,494,0,0" VerticalAlignment="Top" Width="158" Height="72" FontFamily="Arial Black" FontSize="18" Click="button_click_1" Grid.Column="1">
+        <RadioButton x:Name="radioButton" Content="Choice A" HorizontalAlignment="Left" Margin="100,260,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="17" Width="83"/>
+        <RadioButton x:Name="radioButton1" Content="Choice B" HorizontalAlignment="Left" Margin="100,340,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="radioButton2" Content="Choice C" HorizontalAlignment="Left" Margin="100,380,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="radioButton3" Content="Choice D" HorizontalAlignment="Left" Margin="100,300,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+        <Button x:Name="button" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="button_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <RadioButton x:Name="radioButton" Content="Choice A" HorizontalAlignment="Left" Margin="99,276,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="17" Width="83"/>
-        <RadioButton x:Name="radioButton1" Content="Choice B" HorizontalAlignment="Left" Margin="99,377,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="radioButton2" Content="Choice C" HorizontalAlignment="Left" Margin="98,429,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="radioButton3" Content="Choice D" HorizontalAlignment="Left" Margin="99,326,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button x:Name="button_Back" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="button_click_1" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Page>

@@ -27,7 +27,7 @@ namespace HC3_A2
 
         private void button_click(object sender, RoutedEventArgs e)
         {
-            CheckAccount2 p2 = new CheckAccount2();
+            MainPage p2 = new MainPage();
             this.NavigationService.Navigate(p2);
         }
         private void button_click_1(object sender, RoutedEventArgs e)
@@ -45,5 +45,19 @@ namespace HC3_A2
 
         }
 
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
     }
 }

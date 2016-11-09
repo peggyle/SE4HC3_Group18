@@ -47,13 +47,13 @@ namespace HC3_A2
         }
         private void click5(object sender, RoutedEventArgs e)
         {
-            // Change PIN
-            this.NavigationService.Navigate(new HC3_A2.changePin1());
+            // Check Accounts
+            this.NavigationService.Navigate(new HC3_A2.CheckAccount1());
         }
         private void click6(object sender, RoutedEventArgs e)
         {
-            // Check Accounts
-            this.NavigationService.Navigate(new HC3_A2.CheckAccount1());
+            // Change PIN
+            this.NavigationService.Navigate(new HC3_A2.changePin1());
         }
 
         private void back_click(object sender, RoutedEventArgs e)

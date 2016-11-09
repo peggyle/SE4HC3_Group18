@@ -9,13 +9,16 @@
       Title="LogOut">
 
     <Grid>
-        <TextBlock x:Name="thankYouLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Thank you for banking with PErKX."  Margin="66,70,66,0" FontSize="39" FontFamily="Arial" FontWeight="Bold" Width="800" TextAlignment="Center"/>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Thank you for banking with"  Margin="15,15,0,0" FontSize="48" FontFamily="Arial" Foreground="White"/>
 
         <Button x:Name="insertIcon" HorizontalAlignment="Center" VerticalAlignment="Center" Click="insertCardClick">
             <Image Source="/Resources/Insert card.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250"/>
         </Button>
-        
         <Image x:Name="Arrow" Source="/Resources/Arrow down.png" Width="40" Height="75" Margin="300,0,0,0"/>
+        
         <TextBlock x:Name="cardReminderLabel" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Don't forget your card!"  Margin="0,0,0,80" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
     </Grid>
 </Page>
