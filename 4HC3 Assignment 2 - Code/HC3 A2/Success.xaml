@@ -9,12 +9,29 @@
       Title="Page11">
 
     <Grid>
-        <TextBlock x:Name="successLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Action completed successfully"  Margin="0,50,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Success"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <Button x:Name="printButton" Content="Print&#xD;&#xA;Receipt" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,50,50" Width="200" Height="100" Click="print_click" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Transaction completed successfully"/>
 
-        <Button x:Name="moreButton" Content="More&#xD;&#xA;Transactions" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50" Width="200" Height="100" Click="more_click" FontSize="30" FontFamily="Arial"/>
-        <Button x:Name="finishButton" Content="Finish&#xD;&#xA;Banking" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50" Width="200" Height="100" Click="logout_click" FontSize="30" FontFamily="Arial"/>
+        <Button x:Name="printButton" Content="  Print&#xA;Receipt" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0"  Width="150" Height="75" Click="print_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="backButton" Content="  Finish&#xA;Banking" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="150" Height="75" Click="logout_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect> 
+        </Button>
+        <Button x:Name="okButton" Content="      More&#xA;Transactions" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="150" Height="75" Click="more_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Page>
