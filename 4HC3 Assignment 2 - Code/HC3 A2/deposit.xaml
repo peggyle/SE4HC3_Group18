@@ -3,19 +3,32 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HC3_A2"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-	Title="deposit" Width="639" Height="464">
+      d:DesignHeight="600" d:DesignWidth="800"
+	  Title="deposit">
 
-    <Grid Margin="0,0,-0.333,0" Background="#FFF9F5F5">
-        <TextBlock HorizontalAlignment="Left" Margin="52,58,0,0" TextWrapping="Wrap" Text="DEPOSIT" VerticalAlignment="Top" Height="59" Width="269" FontSize="40"/>
-        <ComboBox x:Name="combox" HorizontalAlignment="Left" Margin="182,217,0,0" VerticalAlignment="Top" Width="249" Height="58" SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Content="SAVING ACCOUNT" HorizontalAlignment="Left" Width="247.333333333333"/>
-            <ComboBoxItem Content="CHEQUING ACCOUNT" HorizontalAlignment="Left" Width="247.333333333333"/>
+    <Grid>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text=" Choose account:"  Margin="261,151,224,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Width="315"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Deposit"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+
+        <ComboBox HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="249" Height="58" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="SAVING ACCOUNT" HorizontalAlignment="Left" Width="247.333333333333" FontSize="24"/>
+            <ComboBoxItem Content="CHEQUING ACCOUNT" HorizontalAlignment="Left" Width="247.333333333333" FontSize="24"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="66,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="270" FontSize="20"><Run Text="CHOOSE "/><Run Text="ACCOUNT"/></TextBlock>
-        <Button Content="BACK" HorizontalAlignment="Left" Margin="79,335,0,0" VerticalAlignment="Top" Width="95" Height="51" FontSize="20" Click="Button_Back"/>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="449,335,0,0" VerticalAlignment="Top" Width="95" Height="51" FontSize="20" Click="Button_Click"/>
 
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_Button" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="Button_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

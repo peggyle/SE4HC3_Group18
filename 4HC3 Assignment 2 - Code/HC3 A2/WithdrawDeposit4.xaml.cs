@@ -24,20 +24,40 @@ namespace HC3_A2
         {
             InitializeComponent();
         }
+  
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void print(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("The receipt has been printed out!");
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void transaction(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("You have logged out!"); 
+            this.NavigationService.Navigate(new HC3_A2.MainPage());
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void logout(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new HC3_A2.LogOut());
         }
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
+
+       
+
     }
 }
