@@ -30,8 +30,8 @@ namespace HC3_A2
             // Open new window, simulates printing
             MessageBox.Show("Simulated printing of receipt");
         }
-        private void logout_click(object sender, RoutedEventArgs e) { 
-            // To logout/farewell page
+        private void logout_click(object sender, RoutedEventArgs e) {
+            this.NavigationService.Navigate(new HC3_A2.LogOut());
         }
         private void more_click(object sender, RoutedEventArgs e) {
             // Return to main page

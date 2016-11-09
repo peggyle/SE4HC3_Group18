@@ -178,3 +178,84 @@ C:\Users\Khang\Documents\Current year school work\HC3\A2\4HC3 Assignment 2 - Cod
 C:\Users\Khang\Documents\Current year school work\HC3\A2\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills1.baml
 C:\Users\Khang\Documents\Current year school work\HC3\A2\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills2.baml
 C:\Users\Khang\Documents\Current year school work\HC3\A2\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills3.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\HC3 A2.exe.config
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2.exe
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2.pdb
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\changePin1.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\changePin2.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\changePin3.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\CheckAccount1.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\CheckAccount2.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\CheckAccount3.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\deposit.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\deposit2.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\Page01.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\Withdraw1.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\Withdraw2.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\Withdraw3.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\WithdrawDeposit4.xaml.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\HC3 A2.exe
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\bin\Debug\HC3 A2.pdb
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2.csprojResolveAssemblyReference.cache
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\deposit.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\deposit2.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Withdraw1.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Withdraw2.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Withdraw3.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\WithdrawDeposit4.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\changePin1.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\changePin2.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\changePin3.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\CheckAccount1.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\CheckAccount2.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\CheckAccount3.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\deposit.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\deposit2.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\LogOut.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\MainWindow.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page01.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills1.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills2.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills3.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Withdraw1.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Withdraw2.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Withdraw3.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\WithdrawDeposit4.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page10.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page11.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page12.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page13.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page14.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page08.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page09.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page02.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page03.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page04.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\App.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2_MarkupCompile.cache
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2_MarkupCompile.lref
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\changePin1.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\changePin2.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\changePin3.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\CheckAccount1.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\CheckAccount2.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\CheckAccount3.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\LogOut.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\MainWindow.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page01.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills1.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills2.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\PayBills3.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page10.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page11.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page12.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page13.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page14.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page08.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page09.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page02.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page03.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Page04.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2.g.resources
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3_A2.Properties.Resources.resources
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\HC3 A2.csproj.GenerateResource.Cache
