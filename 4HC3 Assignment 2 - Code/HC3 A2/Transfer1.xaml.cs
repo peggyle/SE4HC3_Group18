@@ -30,12 +30,6 @@ namespace HC3_A2
             accountOptions.Add("Chequings - $ 123,456,789.01");
             accountOptions.Add("Savings 1 - $ 123,456,789.01");
             accountOptions.Add("Savings 2 - $ 111,111,111.11");
-            /*
-            accountOptions.Add("Pay bill - CREDIT CARD COMPANY");
-            accountOptions.Add("Pay bill - GAS AND HYDRO COMPANY");
-            accountOptions.Add("Email money - NAME@DOMAIN.COM");
-            accountOptions.Add("Email money - NAME2@DOMAIN.COM");
-            */
 
             fromDropdown.ItemsSource = accountOptions;
             toDropdown.ItemsSource = accountOptions;
@@ -58,15 +52,6 @@ namespace HC3_A2
             // Navigate to main page
             this.NavigationService.Navigate(new HC3_A2.MainPage());
         }
-        /*
-        private void newPayee_click(object sender, RoutedEventArgs e) {
-            // Navigate to add payee page
-            this.NavigationService.Navigate(new HC3_A2.Page12());
-        }
-        private void newEmail_click(object sender, RoutedEventArgs e) {
-            // Navigate to add email page
-        }
-        */
 
         // After choosing a from account, to account dropdown adjusts
         // from account list always complete, to account list changes
@@ -76,6 +61,21 @@ namespace HC3_A2
             string selectedOption = (sender as ComboBox).SelectedItem as string;
             toOptions.Remove(selectedOption);
             toDropdown.ItemsSource = toOptions;
+        }
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
         }
     }
 }

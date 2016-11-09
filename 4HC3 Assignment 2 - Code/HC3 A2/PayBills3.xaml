@@ -5,20 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HC3_A2"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="Page10">
 
     <Grid>
-        <TextBlock x:Name="confirmLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Are you sure you wish to:"  Margin="0,50,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Pay Bills"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="transferLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,150,0,0" Text="Pay" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="amountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,150,0,0" Text="$XXXX.XX" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,225,0,0" Text="From" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="fromAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,225,0,0" Text="Account A" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="toLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,300,0,0" Text="To" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="toAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,300,0,0" Text="Account B" FontSize="30" FontFamily="Arial"/>
-        
-        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="200" Height="100" Click="ok_click" FontSize="30" FontFamily="Arial"/>
-        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="200" Height="100" Click="back_click" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Are you sure you wish to:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+
+        <TextBlock x:Name="transferLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,200,0,0" Text="Pay" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="amountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,200,0,0" Text="$XXXX.XX" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,275,0,0" Text="From" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="fromAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,275,0,0" Text="Account A" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="toLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,350,0,0" Text="To" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="toAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,350,0,0" Text="Account B" FontSize="30" FontFamily="Arial"/>
+
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="ok_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

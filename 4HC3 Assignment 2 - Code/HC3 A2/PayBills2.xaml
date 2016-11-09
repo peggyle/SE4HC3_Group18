@@ -5,21 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HC3_A2"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="Page9">
 
     <Grid>
-        <TextBlock x:Name="transferLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Pay Bills"  Margin="0,50,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Pay Bills"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="amountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,150,0,0" TextWrapping="Wrap" Text="Amount:" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose amount"/>
 
-        <Button x:Name="okButton" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="200" Height="100" Click="ok_click" FontSize="30" FontFamily="Arial"/>
-        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="200" Height="100" Click="back_click" FontSize="30" FontFamily="Arial"/>
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="okButton" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="ok_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
-        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,60" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please enter"/><LineBreak/><Run Text="an amount"/><LineBreak/><Run Text="before continuing"/></TextBlock>
+        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please enter"/><LineBreak/><Run Text="a valid amount"/></TextBlock>
 
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,140,0,0">
+        <TextBlock x:Name="amountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,200,0,0" TextWrapping="Wrap" Text="Amount:" FontSize="30" FontFamily="Arial"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -44,14 +56,14 @@
                     <Path Stretch="Fill" Width="36" Height="24" Data="F1M555.0371,274.4893L552.7871,276.7383L549.9861,273.9373L547.1991,276.7243L545.1131,274.6393L547.9001,271.8523L545.0101,268.9603L547.2601,266.7113L550.1501,269.6023L552.8921,266.8613L554.9761,268.9463L552.2361,271.6883z M555.3751,264.0003L544.8751,264.0003C543.1251,264.1253,535.0001,270.7503,535.0001,272.2503C535.0001,273.7503,543.1251,279.3753,544.8751,279.5003L555.3751,279.5003C558.8751,279.5003,559.3751,277.7093,559.3751,275.5003L559.3751,268.0003C559.3751,265.7913,558.7501,264.0003,555.3751,264.0003" Fill="#FF333333"/>
                 </Button>
             </Grid>
-            <Grid  Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD7" Click="number_click" FontSize="30" FontFamily="Arial">7</Button>
+            <Grid Grid.Row="1">
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD1" Click="number_click" FontSize="30" FontFamily="Arial">1</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD8" Click="number_click" FontSize="30" FontFamily="Arial">8</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD2" Click="number_click" FontSize="30" FontFamily="Arial">2</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD9" Click="number_click" FontSize="30" FontFamily="Arial">9</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD3" Click="number_click" FontSize="30" FontFamily="Arial">3</Button>
             </Grid>
             <Grid Grid.Row="2">
                 <Button Background="WhiteSmoke" CommandParameter="NUMPAD4" Click="number_click" FontSize="30" FontFamily="Arial">4</Button>
@@ -62,14 +74,14 @@
             <Grid Grid.Column="2" Grid.Row="2">
                 <Button Background="WhiteSmoke" CommandParameter="NUMPAD6" Click="number_click" FontSize="30" FontFamily="Arial">6</Button>
             </Grid>
-            <Grid Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD1" Click="number_click" FontSize="30" FontFamily="Arial">1</Button>
+            <Grid  Grid.Row="3">
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD7" Click="number_click" FontSize="30" FontFamily="Arial">7</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD2" Click="number_click" FontSize="30" FontFamily="Arial">2</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD8" Click="number_click" FontSize="30" FontFamily="Arial">8</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD3" Click="number_click" FontSize="30" FontFamily="Arial">3</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD9" Click="number_click" FontSize="30" FontFamily="Arial">9</Button>
             </Grid>
             <Grid Grid.ColumnSpan="2" Grid.Row="4">
                 <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number_click" FontSize="30" FontFamily="Arial">0</Button>

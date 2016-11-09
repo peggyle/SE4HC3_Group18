@@ -9,15 +9,22 @@
       Title="Page1">
 
     <Grid>
-        <Button x:Name="insertIcon" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Click="insertCardClick">
-            <StackPanel><Image Source="/Resources/Insert card.png"/></StackPanel>
-        </Button>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Welcome"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Insert your card to begin"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+
+        <Button x:Name="insertIcon" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 100 0 0" Click="insertCardClick">
+            <Image Source="/Resources/Insert card.png" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250"/>
+        </Button>
         <Image x:Name="Arrow" Source="/Resources/Arrow up.png" Width="40" Height="75" Margin="300,0,0,0"/>
 
-        <Button x:Name="bankEntryButton" Content="Beep" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 50 50" Width="75" Click="bankEntryClick"/>
-        
-        <Button x:Name="beepButton" Content="Beep" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 100" Width="75" Click="beep"/>
-
+        <Button x:Name="bankEntryButton" Content="Enter Bank Number" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="bankEntryClick" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

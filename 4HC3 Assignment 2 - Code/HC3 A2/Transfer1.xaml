@@ -9,26 +9,33 @@
       Title="Page8">
 
     <Grid>
-        <TextBlock x:Name="transferLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Transfer money between accounts"  Margin="0,50,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Transfer Money"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,150,0,0" TextWrapping="Wrap" Text="From:" FontSize="30" FontFamily="Arial"/>
-        <ComboBox x:Name="fromDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,140,0,0" Width="485" Height="60" FontSize="30" FontFamily="Arial" VerticalContentAlignment="Center"
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose accounts"/>
+
+        <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,225,0,0" TextWrapping="Wrap" Text="From:" FontSize="30" FontFamily="Arial"/>
+        <ComboBox x:Name="fromDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,215,0,0" Width="485" Height="60" FontSize="30" FontFamily="Arial" VerticalContentAlignment="Center"
                   SelectionChanged="fromSelected"/>
 
-        <TextBlock x:Name="toLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,275,0,0" TextWrapping="Wrap" Text="To:" FontSize="30" FontFamily="Arial"/>
-        <ComboBox x:Name="toDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,265,0,0" Width="485" Height="60" FontSize="30" FontFamily="Arial" VerticalContentAlignment="Center"
+        <TextBlock x:Name="toLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,325,0,0" TextWrapping="Wrap" Text="To:" FontSize="30" FontFamily="Arial"/>
+        <ComboBox x:Name="toDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,315,0,0" Width="485" Height="60" FontSize="30" FontFamily="Arial" VerticalContentAlignment="Center"
                   />
 
-        <Button x:Name="okButton" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="200" Height="100" Click="ok_click" FontSize="30" FontFamily="Arial"/>
-        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="200" Height="100" Click="back_click" FontSize="30" FontFamily="Arial"/>
-
-        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,125" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please select"/><LineBreak/><Run Text="From and To"/><LineBreak/><Run Text="before continuing"/></TextBlock>
-
-        <!--
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Transfer Money, Pay Bills, Email Money" VerticalAlignment="Top" Margin="42,24,0,0"/>
-        <Button x:Name="button_Copy1" Content="Add new email recipient" HorizontalAlignment="Left" Margin="222,170,-76,0" VerticalAlignment="Top" Width="154" Click="newEmail_click"/>
-        <Button x:Name="button_Copy2" Content="Add new payee" HorizontalAlignment="Left" Margin="42,170,0,0" VerticalAlignment="Top" Width="154" Click="newPayee_click"/>
-        !-->
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="okButton" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="ok_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        
+        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please select"/><LineBreak/><Run Text="From and To accounts"/></TextBlock>
     </Grid>
 </Page>

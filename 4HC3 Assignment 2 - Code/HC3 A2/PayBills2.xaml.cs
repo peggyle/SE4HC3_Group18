@@ -38,14 +38,14 @@ namespace HC3_A2
             // Null check
             if (amount.Length > 2)
                 // Continue to confirm page
-                this.NavigationService.Navigate(new HC3_A2.Transfer3(fromAccount, toAccount, amount));
+                this.NavigationService.Navigate(new HC3_A2.PayBills3(fromAccount, toAccount, amount));
             else
                 errorMsg.Visibility = Visibility.Visible;
         }
         private void back_click(object sender, RoutedEventArgs e)
         {
             // Return to account selection page
-            this.NavigationService.Navigate(new HC3_A2.Transfer1());
+            this.NavigationService.Navigate(new HC3_A2.PayBills1());
         }
 
         // Number pad
@@ -63,6 +63,21 @@ namespace HC3_A2
                     digitDisplay.Text += button.Content.ToString();
                     break;
             }
+        }
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
         }
     }
 }

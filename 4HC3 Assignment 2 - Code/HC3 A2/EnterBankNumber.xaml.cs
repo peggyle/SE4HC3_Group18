@@ -16,35 +16,41 @@ using System.Windows.Shapes;
 namespace HC3_A2
 {
     /// <summary>
-    /// Interaction logic for Page10.xaml
+    /// Interaction logic for Page2.xaml
     /// </summary>
-    public partial class Transfer3 : Page
+    public partial class EnterBankNumber : Page
     {
-        private string fromAccount;
-        private string toAccount;
-        private string amount;
-
-        public Transfer3(string fromAccount, string toAccount, string amount)
+        public EnterBankNumber()
         {
             InitializeComponent();
-
-            this.fromAccount = fromAccount;
-            this.toAccount = toAccount;
-            this.amount = amount;
-
-            amountLabel.Text = amount;
-            fromAccountLabel.Text = fromAccount;
-            toAccountLabel.Text = toAccount;
         }
 
-        // Buttons
-        private void ok_click(object sender, RoutedEventArgs e) {
-            // Continue to success page
-            this.NavigationService.Navigate(new HC3_A2.Success());
+        private void ok_click(object sender, RoutedEventArgs e)
+        {
+            // Continue to main page
+            this.NavigationService.Navigate(new HC3_A2.EnterPIN());
         }
-        private void back_click(object sender, RoutedEventArgs e) {
-            // Return to amount selection page
-            this.NavigationService.Navigate(new HC3_A2.Transfer2(fromAccount, toAccount));
+        private void back_click(object sender, RoutedEventArgs e)
+        {
+            // Return to welcome page
+            this.NavigationService.Navigate(new HC3_A2.InsertCard());
+        }
+
+        // Number pad
+        private void number_click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            switch (button.CommandParameter.ToString())
+            {
+                case "BACK":
+                    if (digitDisplay.Text.Length > 2)
+                        digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
+                    break;
+
+                default:
+                    digitDisplay.Text += button.Content.ToString();
+                    break;
+            }
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)

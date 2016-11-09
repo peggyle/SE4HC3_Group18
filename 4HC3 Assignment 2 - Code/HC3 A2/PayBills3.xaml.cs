@@ -44,7 +44,22 @@ namespace HC3_A2
         }
         private void back_click(object sender, RoutedEventArgs e) {
             // Return to amount selection page
-            this.NavigationService.Navigate(new HC3_A2.Transfer2(fromAccount, toAccount));
+            this.NavigationService.Navigate(new HC3_A2.PayBills2(fromAccount, toAccount));
+        }
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
         }
     }
 }

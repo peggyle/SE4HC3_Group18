@@ -50,7 +50,7 @@ namespace HC3_A2
             // Null check
             if (fromAccount != null && toAccount != null)
                 // Navigate to next page (choose amount page)
-                this.NavigationService.Navigate(new HC3_A2.Transfer2( fromAccount.ToString(), toAccount.ToString() ));
+                this.NavigationService.Navigate(new HC3_A2.PayBills2( fromAccount.ToString(), toAccount.ToString() ));
             else
                 // Display error
                 errorMsg.Visibility = Visibility.Visible;
@@ -58,6 +58,21 @@ namespace HC3_A2
         private void back_click(object sender, RoutedEventArgs e) {
             // Navigate to main page
             this.NavigationService.Navigate(new HC3_A2.MainPage());
+        }
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
         }
     }
 }
