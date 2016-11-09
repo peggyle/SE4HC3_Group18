@@ -10,6 +10,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="58,42,0,0" TextWrapping="Wrap" Text="Confirmation" VerticalAlignment="Top" Height="60" Width="245" FontSize="40"/>
         <Button Content="BACK" HorizontalAlignment="Left" Margin="81,303,0,0" VerticalAlignment="Top" Width="100" Height="75" FontSize="24" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="81,163,0,0" TextWrapping="Wrap" Text="AMOUNT IS: " VerticalAlignment="Top" Height="33" Width="134" FontSize="20"/>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="220,163,0,0" TextWrapping="Wrap" Text="$ " VerticalAlignment="Top" Width="227" TextChanged="TextBox_TextChanged" FontSize="20"/>
+        <TextBlock x:Name="numberLabel" HorizontalAlignment="Left" Margin="220,163,0,0" TextWrapping="Wrap" Text="$ " VerticalAlignment="Top" Height="33" Width="247" FontSize="20"/>
     </Grid>
 </Page>
