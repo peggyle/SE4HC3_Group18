@@ -20,8 +20,10 @@ namespace HC3_A2
     /// </summary>
     public partial class changePin2 : Page
     {
+        //int rowNum;
         public changePin2()
         {
+           // this.rowNum = Int32.Parse(rowNum) - 1;
             InitializeComponent();
         }
 
@@ -33,28 +35,79 @@ namespace HC3_A2
 
         private void button_click(object sender, RoutedEventArgs e)
         {
+            if(textBox1.Text.Length==0 || textBox2.Text.Length == 0|| textBox3.Text.Length == 0|| textBox4.Text.Length == 0|| textBox5.Text.Length == 0|| textBox6.Text.Length == 0|| textBox7.Text.Length == 0|| textBox8.Text.Length == 0)
+            {
+                MessageBox.Show("Change PIN is not complete",
+                 "Important Message");
+
+            }else if(textBox1.Text== textBox5.Text&& textBox2.Text== textBox6.Text&& textBox3.Text== textBox7.Text&& textBox4.Text== textBox8.Text)
+            {
+                MessageBox.Show("You can not change to the same PIN",
+                 "Important Message");
+            }
+            else
+            { 
             changePin3 confirm = new changePin3();
             this.NavigationService.Navigate(confirm);
+            }
         }
         private void number_click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            switch (button.CommandParameter.ToString())
+            
+            if (button.CommandParameter.ToString()== "BACK")
             {
-                case "ENTER":
-                    changePin3 p3 = new changePin3();
-                    this.NavigationService.Navigate(p3);
-                    break;
+                if(textBox8.Text.Length > 0) textBox8.Text = textBox8.Text.Remove(textBox8.Text.Length - 1);
+                else if(textBox7.Text.Length > 0) textBox7.Text = textBox7.Text.Remove(textBox7.Text.Length - 1);
+                else if(textBox6.Text.Length > 0) textBox6.Text = textBox6.Text.Remove(textBox6.Text.Length - 1);
+                else if(textBox5.Text.Length > 0) textBox5.Text = textBox5.Text.Remove(textBox5.Text.Length - 1);
+                else if(textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
+                else if(textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+                else if(textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                else if(textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                else {
+                    MessageBox.Show("No more to delete",
+               "Important Message");
+                }
 
-                case "BACK":
-                    changePin3 p1 = new changePin3();
-                    this.NavigationService.Navigate(p1);
-                    break;
-
-                default:
-                   
-                    break;
+            }
+            else if (textBox1.Text.Length == 0)
+            {
+                textBox1.Text += button.Content.ToString();
+            }
+            else if(textBox2.Text.Length == 0)
+            {
+                textBox2.Text += button.Content.ToString();
+            }
+            else if (textBox3.Text.Length == 0)
+            {
+                textBox3.Text += button.Content.ToString();
+            }
+            else if (textBox4.Text.Length == 0)
+            {
+                textBox4.Text += button.Content.ToString();
+            }
+            else if (textBox5.Text.Length == 0)
+            {
+                textBox5.Text += button.Content.ToString();
+            }
+            else if (textBox6.Text.Length == 0)
+            {
+                textBox6.Text += button.Content.ToString();
+            }
+            else if (textBox7.Text.Length == 0)
+            {
+                textBox7.Text += button.Content.ToString();
+            }
+            else if (textBox8.Text.Length == 0)
+            {
+                textBox8.Text += button.Content.ToString();
+            }
+            else
+            {
+                MessageBox.Show("PIN can only be 4 digits.","Message");
             }
         }
+        
     }
 }

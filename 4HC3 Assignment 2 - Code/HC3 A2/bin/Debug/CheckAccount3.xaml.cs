@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace HC3_A2
 {
     /// <summary>
-    /// Interaction logic for Page3.xaml
+    /// Interaction logic for CheckAccount3.xaml
     /// </summary>
     public partial class CheckAccount3 : Page
     {
@@ -33,7 +33,8 @@ namespace HC3_A2
 
         private void button_click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new MainPage());
+            changePin1 MoreActions = new changePin1();
+            this.NavigationService.Navigate(MoreActions);
         }
 
     }

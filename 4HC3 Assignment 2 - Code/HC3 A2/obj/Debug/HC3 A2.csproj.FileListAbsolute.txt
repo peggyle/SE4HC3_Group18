@@ -251,3 +251,5 @@ D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Transfer3.g.c
 D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Transfer3.baml
 D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Success.g.cs
 D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\Success.baml
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\EnterBankNumber.g.cs
+D:\Github\SE4HC3_Group18\4HC3 Assignment 2 - Code\HC3 A2\obj\Debug\EnterBankNumber.baml

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TEST
+namespace HC3_A2
 {
     /// <summary>
     /// Interaction logic for CheckAccount3.xaml
