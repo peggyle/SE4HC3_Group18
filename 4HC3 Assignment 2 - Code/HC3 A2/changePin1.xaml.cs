@@ -26,7 +26,7 @@ namespace HC3_A2
         }
         private void button_click(object sender, RoutedEventArgs e)
         {
-            CheckAccount1 back = new CheckAccount1();
+            MainPage back = new MainPage();
             this.NavigationService.Navigate(back);
         }
         private void button_click_1(object sender, RoutedEventArgs e)
@@ -39,28 +39,20 @@ namespace HC3_A2
         {
 
         }
-/*
-        private void checkBox_Checked1(object sender, RoutedEventArgs e)
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
         {
-            if (checkBox1.Checked == true)
-            {
-                checkBox2.Checked == false; checkBox3.Checked == false; checkBox4 == false;
-            }
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
         }
-
-        private void checkBox_Checked2(object sender, RoutedEventArgs e)
+        private void buttonReleased(object sender, RoutedEventArgs e)
         {
-
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
         }
-
-        private void checkBox_Checked3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void checkBox_Checked4(object sender, RoutedEventArgs e)
-        {
-
-        }*/
     }
 }

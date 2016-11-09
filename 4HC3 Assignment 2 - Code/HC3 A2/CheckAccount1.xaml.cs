@@ -27,7 +27,7 @@ namespace HC3_A2
 
         private void button_click(object sender, RoutedEventArgs e)
         {
-            CheckAccount2 p2 = new CheckAccount2();
+            MainPage p2 = new MainPage();
             this.NavigationService.Navigate(p2);
         }
         private void button_click_1(object sender, RoutedEventArgs e)

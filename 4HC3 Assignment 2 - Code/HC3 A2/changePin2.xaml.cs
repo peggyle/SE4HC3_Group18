@@ -108,6 +108,20 @@ namespace HC3_A2
                 MessageBox.Show("PIN can only be 4 digits.","Message");
             }
         }
-        
+
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
     }
 }
