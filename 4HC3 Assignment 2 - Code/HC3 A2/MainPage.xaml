@@ -22,7 +22,10 @@
         <Button x:Name="Button5" Content="Check Accounts" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,360,325,0"  Width="300" Height="75" Click="click5" FontSize="30" FontFamily="Arial"/>
         <Button x:Name="Button6" Content="Change PIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="325,360,0,0"  Width="300" Height="75" Click="click6" FontSize="30" FontFamily="Arial"/>
 
-        <Button x:Name="backButton" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial"/>
-
+        <Button x:Name="backButton" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>

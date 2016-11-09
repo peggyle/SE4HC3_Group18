@@ -23,6 +23,9 @@ namespace HC3_A2
         public MainPage()
         {
             InitializeComponent();
+
+            backButton.PreviewMouseDown += backButtonPressed;
+            backButton.PreviewMouseUp += backButtonReleased;
         }
 
         private void click1(object sender, RoutedEventArgs e)
@@ -58,8 +61,23 @@ namespace HC3_A2
 
         private void back_click(object sender, RoutedEventArgs e)
         {
+            
             // Exit to farewell page
             //this.NavigationService.Navigate(new HC3_A2.Page4());
+        }
+
+        private void backButtonPressed(object sender, RoutedEventArgs e)
+        {
+            backButton.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            backButton.RenderTransform = trans;
+        }
+
+        private void backButtonReleased(object sender, RoutedEventArgs e)
+        {
+            backButton.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(-3, -3);
+            backButton.RenderTransform = trans;
         }
     }
 }
