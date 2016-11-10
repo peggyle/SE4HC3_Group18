@@ -29,7 +29,6 @@ namespace HC3_A2
             InitializeComponent();
 
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
-
             bankNumber = file.ReadLine();
             pin = file.ReadLine();
             balance = file.ReadLine();

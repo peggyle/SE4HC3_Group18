@@ -20,21 +20,36 @@ namespace HC3_A2
     /// </summary>
     public partial class EnterBankNumber : Page
     {
+        string bankNumber, pin, balance;
+
         public EnterBankNumber()
         {
             InitializeComponent();
+
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance = file.ReadLine();
         }
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
-            if (digitDisplay.Text.Length  > 0 )
+            if (digitDisplay.Text.Length  == 12 )
             {
-                this.NavigationService.Navigate(new HC3_A2.EnterPIN());
+                if (digitDisplay.Text == bankNumber)
+                    this.NavigationService.Navigate(new HC3_A2.EnterPIN());
+                else
+                {
+                    errorMsgWrongAcc.Visibility = Visibility.Visible;
+                    digitDisplay.Text = "";
+                }
             }
-
             else
-                errorMsg.Visibility = Visibility.Visible; 
-
+            {
+                errorMsgEmpty.Visibility = Visibility.Visible;
+                //digitDisplay.Text = "";
+            }
+            
            
         }
         private void back_click(object sender, RoutedEventArgs e)
@@ -46,16 +61,21 @@ namespace HC3_A2
         // Number pad
         private void number_click(object sender, RoutedEventArgs e)
         {
+            errorMsgEmpty.Visibility = Visibility.Collapsed;
+            errorMsgWrongAcc.Visibility = Visibility.Collapsed;
+
+
             Button button = sender as Button;
             switch (button.CommandParameter.ToString())
             {
                 case "BACK":
-                    if (digitDisplay.Text.Length > 2)
+                    if (digitDisplay.Text.Length > 0)
                         digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
                     break;
 
                 default:
-                    digitDisplay.Text += button.Content.ToString();
+                    if (digitDisplay.Text.Length < 12)
+                        digitDisplay.Text += button.Content.ToString();
                     break;
             }
         }
