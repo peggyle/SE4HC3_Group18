@@ -57,6 +57,7 @@ namespace HC3_A2
         {
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0)
             {
+                errorMsgWrongPIN.Visibility = Visibility.Hidden;
                 errorMsgWrongNum.Visibility = Visibility.Visible;
                 textBox1.Text = "";
                 textBox2.Text = "";
@@ -67,9 +68,10 @@ namespace HC3_A2
             {
                 string enteredPin = pin1 + pin2 + pin3 + pin4;
                 if (enteredPin == pin)
-                    this.NavigationService.Navigate(new HC3_A2.changePin4(pin));
+                    this.NavigationService.Navigate(new HC3_A2.changePin5(pin));
                 else
                 {
+                    errorMsgWrongNum.Visibility = Visibility.Hidden;
                     errorMsgWrongPIN.Visibility = Visibility.Visible;
                     textBox1.Text = "";
                     textBox2.Text = "";

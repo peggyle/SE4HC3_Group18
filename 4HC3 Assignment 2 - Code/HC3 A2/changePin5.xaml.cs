@@ -18,30 +18,21 @@ namespace HC3_A2
     /// <summary>
     /// Interaction logic for changePin4.xaml
     /// </summary>
-    public partial class changePin4 : Page
+    public partial class changePin5 : Page
     {
-        string pin1, pin2, pin3, pin4;
-        string bankNumber, pin, balance1, balance2, balance3;
+        string pin1, pin2, pin3, pin4, pin;
         string oldpin;
 
-        public changePin4(string oldpin)
+        public changePin5(string oldpin)
         {
             InitializeComponent();
 
             this.oldpin = oldpin;
-
-            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
-            bankNumber = file.ReadLine();
-            pin = file.ReadLine();
-            balance1 = file.ReadLine();
-            balance2 = file.ReadLine();
-            balance3 = file.ReadLine();
-            file.Close();
         }
 
         private void button2_click(object sender, RoutedEventArgs e)
         {
-            changePin5 back = new changePin5(pin);
+            MainPage back = new MainPage();
             this.NavigationService.Navigate(back);
         }
 
@@ -59,7 +50,7 @@ namespace HC3_A2
             else
             {
                 pin = pin1 + pin2 + pin3 + pin4;
-                if (oldpin != pin)
+                if (oldpin == pin)
                 {
                     errorMsgWrongNum.Visibility = Visibility.Hidden;
                     errorMsgWrongPIN.Visibility = Visibility.Visible;
@@ -69,16 +60,7 @@ namespace HC3_A2
                     textBox4.Text = "";
                 } else
                 {
-                    System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
-
-                    file.WriteLine(bankNumber);
-                    file.WriteLine(pin);
-                    file.WriteLine(balance1);
-                    file.WriteLine(balance2);
-                    file.WriteLine(balance3);
-                    file.Close();
-
-                    this.NavigationService.Navigate(new HC3_A2.changePin3());
+                    this.NavigationService.Navigate(new HC3_A2.changePin4(pin));
                 }
                 
             }

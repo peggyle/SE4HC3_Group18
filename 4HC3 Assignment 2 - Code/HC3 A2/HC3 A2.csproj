@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="changePin5.xaml.cs">
+      <DependentUpon>changePin5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LogOut2.xaml.cs">
       <DependentUpon>LogOut2.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="changePin4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="changePin5.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
