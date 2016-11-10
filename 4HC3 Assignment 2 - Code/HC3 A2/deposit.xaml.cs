@@ -27,20 +27,36 @@ namespace HC3_A2
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            
+
+
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            object values = comboBox.SelectedItem;
-            
-            if (values == null)
+
+
+
+            if (comboBox.SelectedItem == saving)
             {
-                 errorMsg.Visibility = Visibility.Visible; 
+                this.NavigationService.Navigate(new HC3_A2.Dsaving());
             }
-       
+
+
+            if (comboBox.SelectedItem == chequing)
+            {
+                this.NavigationService.Navigate(new HC3_A2.deposit2());
+            }
+
+            if (comboBox.SelectedItem == other)
+            {
+                this.NavigationService.Navigate(new HC3_A2.Dother());
+            }
+
+
+            else
+
+                errorMsg.Visibility = Visibility.Visible;
         }
 
         private void back_Button(object sender, RoutedEventArgs e)
@@ -68,18 +84,17 @@ namespace HC3_A2
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.deposit2());
+
         }
 
         private void saving_Selected(object sender, RoutedEventArgs e)
         {
-            object saving = ComboBox.SelectedEvent;
-            this.NavigationService.Navigate(new HC3_A2.Dsaving());
+
         }
 
         private void other_Selected(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.Dother());
+
         }
 
 

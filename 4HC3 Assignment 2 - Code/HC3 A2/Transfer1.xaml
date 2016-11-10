@@ -14,14 +14,14 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Transfer Money"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose accounts"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose accounts:"/>
 
         <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,225,0,0" TextWrapping="Wrap" Text="From:" FontSize="30" FontFamily="Arial"/>
-        <ComboBox x:Name="fromDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,215,0,0" Width="485" Height="60" FontSize="30" FontFamily="Arial" VerticalContentAlignment="Center"
+        <ComboBox x:Name="fromDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,215,0,0" Width="485" Height="60" FontSize="20" FontFamily="Arial" VerticalContentAlignment="Center"
                   SelectionChanged="fromSelected"/>
 
         <TextBlock x:Name="toLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,325,0,0" TextWrapping="Wrap" Text="To:" FontSize="30" FontFamily="Arial"/>
-        <ComboBox x:Name="toDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,315,0,0" Width="485" Height="60" FontSize="30" FontFamily="Arial" VerticalContentAlignment="Center"
+        <ComboBox x:Name="toDropdown" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,315,0,0" Width="485" Height="60" FontSize="20" FontFamily="Arial" VerticalContentAlignment="Center"
                   />
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">

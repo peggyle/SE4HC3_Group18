@@ -8,12 +8,17 @@
       d:DesignHeight="600" d:DesignWidth="800"
       Title="changePin2">
 
-    <Grid Margin="2,0,-2,0">
+    <Grid>
         <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
         <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Change PIN"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter old PIN"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        
+        <!--
         <Label x:Name="label_Copy" Content="Old PIN" HorizontalAlignment="Left" Height="54" Margin="80,130,0,0" VerticalAlignment="Top" Width="140" FontFamily="Arial" FontSize="36"/>
+        -->
 
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>
@@ -80,9 +85,10 @@
             </Button.Effect>
         </Button>
 
-        <TextBox x:Name="textBox1" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="250,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
-        <TextBox x:Name="textBox2" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="327,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
-        <TextBox x:Name="textBox3" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="402,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
-        <TextBox x:Name="textBox4" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="475,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox1" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="250,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox2" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="327,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox3" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="402,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox4" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="475,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+
     </Grid>
 </Page>

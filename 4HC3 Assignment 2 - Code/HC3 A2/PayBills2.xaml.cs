@@ -29,6 +29,8 @@ namespace HC3_A2
 
             this.fromAccount = fromAccount;
             this.toAccount = toAccount;
+
+            textLabel.Text = "From " + fromAccount + "\nTo " + toAccount;
         }
 
         // Buttons

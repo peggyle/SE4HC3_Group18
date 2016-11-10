@@ -19,9 +19,9 @@
         <TextBlock x:Name="transferLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,200,0,0" Text="Transfer" FontSize="30" FontFamily="Arial"/>
         <TextBlock x:Name="amountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,200,0,0" Text="$XXXX.XX" FontSize="30" FontFamily="Arial"/>
         <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,275,0,0" Text="From" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="fromAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,275,0,0" Text="Account A" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="fromAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,280,0,0" Text="Account A" FontSize="20" FontFamily="Arial"/>
         <TextBlock x:Name="toLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,350,0,0" Text="To" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="toAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,350,0,0" Text="Account B" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="toAccountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,355,0,0" Text="Account B" FontSize="20" FontFamily="Arial"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>

@@ -13,12 +13,15 @@
         <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Confirmation"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Transaction completed successfully"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+
         <Button x:Name="repceit" Content="Print Receipt" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,290"  Width="374" Height="75" Click="print" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="transc" Content="More Transaction" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,166"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="transc" Content="More Transactions" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,166"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -28,6 +31,6 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="155,116,0,0" TextWrapping="Wrap" Text="Transaction Done Successfully!" VerticalAlignment="Top" Height="79" Width="546" FontSize="36"/>
+        
     </Grid>
 </Page>
