@@ -8,13 +8,13 @@
       d:DesignHeight="600" d:DesignWidth="800"
       Title="Withdraw2">
 
-    <Grid>
+    <Grid Height="600" VerticalAlignment="Bottom">
         <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
         <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
-        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Chequing Account"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Withdraw"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter your amount "  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter your amount "  Margin="0,167,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
@@ -27,7 +27,7 @@
             </Button.Effect>
         </Button>
 
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,240,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -87,6 +87,7 @@
                 <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number0_click" FontSize="30" FontFamily="Arial">0</Button>
             </Grid>
         </Grid>
+        <TextBlock x:Name="titleLabel_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Chequing Account"  Margin="27,109,0,0" FontSize="36" FontFamily="Arial" Foreground="Black" FontStyle="Italic"/>
 
     </Grid>
 </Page>

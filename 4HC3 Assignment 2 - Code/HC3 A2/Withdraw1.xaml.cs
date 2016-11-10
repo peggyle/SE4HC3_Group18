@@ -26,7 +26,7 @@ namespace HC3_A2
         }
 
 
-
+        
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -53,8 +53,8 @@ namespace HC3_A2
 
             else
 
-                errorMsg.Visibility = Visibility.Visible;
-
+                errorMsg.Visibility = Visibility.Visible; 
+          
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
@@ -80,20 +80,20 @@ namespace HC3_A2
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
-
+       
 
 
     }

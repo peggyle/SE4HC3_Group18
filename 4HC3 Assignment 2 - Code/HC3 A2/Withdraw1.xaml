@@ -14,7 +14,7 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Withdraw"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,156,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose an account:"/>
+         <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,156,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose an account:"/>
 
         <ComboBox x:Name="comboBox"  HorizontalAlignment="Left" Margin="75,272,0,0" VerticalAlignment="Top" Width="641" Height="58" FontSize="20" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem x:Name="saving"   Content="SAVEING ACCOUNT  123654128  Balance $2000.00" HorizontalAlignment="Left" Width="631" Selected="ComboBoxItem_Selected_1"/>
