@@ -27,8 +27,19 @@ namespace HC3_A2
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
-            // Continue to main page
-            this.NavigationService.Navigate(new HC3_A2.MainPage());
+
+            string text = digitDisplay.Text;
+
+            if (text.Length > 0 && text.Length == 4 )
+            {
+                this.NavigationService.Navigate(new HC3_A2.MainPage());
+            }
+
+            else
+                errorMsg.Visibility = Visibility.Visible; 
+
+
+            ;
         }
         private void back_click(object sender, RoutedEventArgs e)
         {

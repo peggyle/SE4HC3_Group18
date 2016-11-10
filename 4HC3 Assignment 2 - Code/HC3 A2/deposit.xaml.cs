@@ -34,7 +34,13 @@ namespace HC3_A2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HC3_A2.deposit2());
+            object values = comboBox.SelectedItem;
+            
+            if (values == null)
+            {
+                 errorMsg.Visibility = Visibility.Visible; 
+            }
+       
         }
 
         private void back_Button(object sender, RoutedEventArgs e)
@@ -59,6 +65,23 @@ namespace HC3_A2
             TranslateTransform trans = new TranslateTransform(3, 3);
             b.RenderTransform = trans;
         }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HC3_A2.deposit2());
+        }
+
+        private void saving_Selected(object sender, RoutedEventArgs e)
+        {
+            object saving = ComboBox.SelectedEvent;
+            this.NavigationService.Navigate(new HC3_A2.Dsaving());
+        }
+
+        private void other_Selected(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HC3_A2.Dother());
+        }
+
 
     }
 }

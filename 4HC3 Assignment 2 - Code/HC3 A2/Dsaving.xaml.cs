@@ -16,34 +16,32 @@ using System.Windows.Shapes;
 namespace HC3_A2
 {
     /// <summary>
-    /// Interaction logic for CheckAccount3.xaml
+    /// Interaction logic for Dsaving.xaml
     /// </summary>
-    public partial class CheckAccount3 : Page
+    public partial class Dsaving : Page
     {
-        public CheckAccount3()
+        public Dsaving()
         {
             InitializeComponent();
         }
 
-       
-
-        private void transaction(object sender, RoutedEventArgs e)
+        private void back_Button(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.MainPage());
+            this.NavigationService.Navigate(new HC3_A2.deposit());
         }
 
-        private void logout(object sender, RoutedEventArgs e)
+        private void OkButton(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.LogOut());
+            this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }
 
-        private void buttonPressed(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
-            b.Effect = null;
-            TranslateTransform trans = new TranslateTransform(3, 3);
-            b.RenderTransform = trans;
+
         }
+
+
+
 
         private void buttonReleased(object sender, RoutedEventArgs e)
         {
@@ -52,7 +50,13 @@ namespace HC3_A2
             TranslateTransform trans = new TranslateTransform(-3, -3);
             b.RenderTransform = trans;
         }
-
+        private void buttonPressed(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            b.Effect = null;
+            TranslateTransform trans = new TranslateTransform(3, 3);
+            b.RenderTransform = trans;
+        }
 
     }
 }

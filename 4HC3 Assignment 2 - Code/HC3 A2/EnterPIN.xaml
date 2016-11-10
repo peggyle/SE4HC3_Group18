@@ -27,6 +27,8 @@
             </Button.Effect>
         </Button>
 
+        
+        
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -41,6 +43,11 @@
                 <ColumnDefinition Width="95"/>
                 <ColumnDefinition Width="95"/>
             </Grid.ColumnDefinitions>
+
+
+            <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please Enter Correct Pin"/></TextBlock>
+
 
             <Grid Grid.ColumnSpan="3">
                 <Border BorderThickness="1" BorderBrush="Black">
@@ -82,7 +89,12 @@
             <Grid Grid.ColumnSpan="3" Grid.Row="4">
                 <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number_click" FontSize="30" FontFamily="Arial">0</Button>
             </Grid>
+
+
+
+           
         </Grid>
 
+       
     </Grid>
 </Page>

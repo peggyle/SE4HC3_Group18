@@ -56,6 +56,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Wother.xaml.cs">
+      <DependentUpon>Wother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wsaving.xaml.cs">
+      <DependentUpon>Wsaving.xaml</DependentUpon>
+    </Compile>
     <Page Include="changePin1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,6 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="changePin4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="CheckAccount1.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +105,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Dother.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dsaving.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="EnterBankNumber.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +142,9 @@
       <DependentUpon>changePin3.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="changePin4.xaml.cs">
+      <DependentUpon>changePin4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CheckAccount1.xaml.cs">
       <DependentUpon>CheckAccount1.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -143,6 +164,12 @@
     <Compile Include="deposit2.xaml.cs">
       <DependentUpon>deposit2.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Dother.xaml.cs">
+      <DependentUpon>Dother.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dsaving.xaml.cs">
+      <DependentUpon>Dsaving.xaml</DependentUpon>
     </Compile>
     <Compile Include="EnterBankNumber.xaml.cs">
       <DependentUpon>EnterBankNumber.xaml</DependentUpon>
@@ -214,6 +241,14 @@
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wother.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Wsaving.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

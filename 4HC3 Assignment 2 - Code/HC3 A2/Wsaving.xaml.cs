@@ -16,16 +16,14 @@ using System.Windows.Shapes;
 namespace HC3_A2
 {
     /// <summary>
-    /// Interaction logic for Page2.xaml
+    /// Interaction logic for Wsaving.xaml
     /// </summary>
-    public partial class Withdraw2 : Page
+    public partial class Wsaving : Page
     {
-        public Withdraw2()
+        public Wsaving()
         {
             InitializeComponent();
         }
-
-   
 
 
         private void buttonPressed(object sender, RoutedEventArgs e)
@@ -52,57 +50,57 @@ namespace HC3_A2
 
         private void number1_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 1; 
+            display.Text = display.Text + 1;
         }
 
         private void number_2click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 2; 
+            display.Text = display.Text + 2;
         }
 
         private void number3_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 3; 
+            display.Text = display.Text + 3;
         }
 
         private void number4_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 4; 
+            display.Text = display.Text + 4;
         }
 
         private void number5_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 5; 
+            display.Text = display.Text + 5;
         }
 
         private void number6_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 6; 
+            display.Text = display.Text + 6;
         }
 
         private void number7_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 7; 
+            display.Text = display.Text + 7;
         }
 
         private void number8_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 8; 
+            display.Text = display.Text + 8;
         }
 
         private void number9_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 9; 
+            display.Text = display.Text + 9;
         }
 
         private void number0_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text + 0; 
+            display.Text = display.Text + 0;
         }
 
         private void back_click(object sender, RoutedEventArgs e)
         {
-             
+
             this.NavigationService.Navigate(new HC3_A2.Withdraw1());
         }
 
@@ -115,20 +113,11 @@ namespace HC3_A2
             }
 
             else
-                errorMsg.Visibility = Visibility.Visible; 
-           
+                errorMsg.Visibility = Visibility.Visible;
+
         }
 
 
 
-
-
-
-
-
-
-
-
-       
     }
 }
