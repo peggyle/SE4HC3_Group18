@@ -21,10 +21,19 @@ namespace HC3_A2
     public partial class changePin4 : Page
     {
         string pin1, pin2, pin3, pin4;
+        string bankNumber, pin, balance1, balance2, balance3;
 
         public changePin4()
         {
             InitializeComponent();
+
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            file.Close();
         }
 
         private void button2_click(object sender, RoutedEventArgs e)
@@ -45,8 +54,16 @@ namespace HC3_A2
             }
             else
             {
-                // StreamWriter code here
-                // to save new PIN
+                System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
+
+                pin = pin1 + pin2 + pin3 + pin4;
+
+                file.WriteLine(bankNumber);
+                file.WriteLine(pin);
+                file.WriteLine(balance1);
+                file.WriteLine(balance2);
+                file.WriteLine(balance3);
+                file.Close();
 
                 this.NavigationService.Navigate(new HC3_A2.changePin3());
             }

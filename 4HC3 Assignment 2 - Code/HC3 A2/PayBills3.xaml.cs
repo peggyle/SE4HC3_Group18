@@ -23,6 +23,7 @@ namespace HC3_A2
         private string fromAccount;
         private string toAccount;
         private string amount;
+        string bankNumber, pin, balance1, balance2, balance3;
 
         public PayBills3(string fromAccount, string toAccount, string amount)
         {
@@ -32,13 +33,44 @@ namespace HC3_A2
             this.toAccount = toAccount;
             this.amount = amount;
 
-            amountLabel.Text = amount;
+            amountLabel.Text = String.Format("{0:C2}", Convert.ToDouble(amount.Substring(2)));
             fromAccountLabel.Text = fromAccount;
             toAccountLabel.Text = toAccount;
+
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            file.Close();
         }
 
         // Buttons
         private void ok_click(object sender, RoutedEventArgs e) {
+            System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
+            file.WriteLine(bankNumber);
+            file.WriteLine(pin);
+
+            string account1 = fromAccount.Split(' ')[0].ToLower();
+            string account2 = toAccount.Split(' ')[0].ToLower();
+            if (account1 == "chequing")
+            {
+                balance1 = Convert.ToString(Convert.ToInt32(balance1) - Convert.ToInt32(amount.Substring(2)));
+            }
+            else if (account1 == "savings")
+            {
+                balance2 = Convert.ToString(Convert.ToInt32(balance2) - Convert.ToInt32(amount.Substring(2)));
+            }
+            else if (account1 == "other")
+            {
+                balance3 = Convert.ToString(Convert.ToInt32(balance3) - Convert.ToInt32(amount.Substring(2)));
+            }
+
+            file.WriteLine(balance1);
+            file.WriteLine(balance2);
+            file.WriteLine(balance3);
+            file.Close();
             // Continue to success page
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }

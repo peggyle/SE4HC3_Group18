@@ -62,11 +62,6 @@
     <Compile Include="Wsaving.xaml.cs">
       <DependentUpon>Wsaving.xaml</DependentUpon>
     </Compile>
-    <Page Include="changePin1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
     <Page Include="changePin2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,10 +124,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="changePin1.xaml.cs">
-      <DependentUpon>changePin1.xaml</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="changePin2.xaml.cs">
       <DependentUpon>changePin2.xaml</DependentUpon>

@@ -34,8 +34,7 @@ namespace HC3_A2
 
         private void button2_click(object sender, RoutedEventArgs e)
         {
-            changePin1 back = new changePin1();
-            this.NavigationService.Navigate(back);
+            this.NavigationService.Navigate(new HC3_A2.MainPage());
         }
 
         /*

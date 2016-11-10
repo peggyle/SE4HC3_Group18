@@ -53,7 +53,7 @@ namespace HC3_A2
         private void click6(object sender, RoutedEventArgs e)
         {
             // Change PIN
-            this.NavigationService.Navigate(new HC3_A2.changePin1());
+            this.NavigationService.Navigate(new HC3_A2.changePin2());
         }
 
         private void back_click(object sender, RoutedEventArgs e)
