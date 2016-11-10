@@ -21,7 +21,7 @@ namespace HC3_A2
     public partial class Withdraw3 : Page
     {
 
-        string bankNumber, pin, balance1, balance2, balance3;
+        string bankNumber, pin, balance1, balance2, balance3, bankNumberFlag;
         private string amount;
         private string account;
         
@@ -35,6 +35,7 @@ namespace HC3_A2
             balance1 = file.ReadLine();
             balance2 = file.ReadLine();
             balance3 = file.ReadLine();
+            bankNumberFlag = file.ReadLine();
             file.Close();
 
             this.amount = amount;
@@ -93,6 +94,7 @@ namespace HC3_A2
                 file.WriteLine(balance2);
                 file.WriteLine(Convert.ToDouble(balance3) - Convert.ToDouble(amount.Substring(2)));
             }
+            file.WriteLine(bankNumberFlag);
             file.Close();
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }

@@ -22,7 +22,7 @@ namespace HC3_A2
     {
         string account;
         double depositAmount = 0;
-        string bankNumber, pin, balance1, balance2, balance3;
+        string bankNumber, pin, balance1, balance2, balance3, bankNumberFlag;
 
         public deposit2(string account)
         {
@@ -37,6 +37,7 @@ namespace HC3_A2
             balance1 = file.ReadLine();
             balance2 = file.ReadLine();
             balance3 = file.ReadLine();
+            bankNumberFlag = file.ReadLine();
             file.Close();
         }
 
@@ -73,6 +74,7 @@ namespace HC3_A2
             file.WriteLine(balance1);
             file.WriteLine(balance2);
             file.WriteLine(balance3);
+            file.WriteLine(bankNumberFlag);
             file.Close();
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }

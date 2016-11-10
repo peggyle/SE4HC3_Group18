@@ -23,7 +23,7 @@ namespace HC3_A2
         private string fromAccount;
         private string toAccount;
         private string amount;
-        string bankNumber, pin, balance1, balance2, balance3;
+        string bankNumber, pin, balance1, balance2, balance3, bankNumberFlag;
 
         public Transfer3(string fromAccount, string toAccount, string amount)
         {
@@ -43,6 +43,7 @@ namespace HC3_A2
             balance1 = file.ReadLine();
             balance2 = file.ReadLine();
             balance3 = file.ReadLine();
+            bankNumberFlag = file.ReadLine();
             file.Close();
         }
 
@@ -83,6 +84,7 @@ namespace HC3_A2
             file.WriteLine(balance1);
             file.WriteLine(balance2);
             file.WriteLine(balance3);
+            file.WriteLine(bankNumberFlag);
             file.Close();
             // Continue to success page
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
