@@ -22,6 +22,8 @@ namespace HC3_A2
     {
         private string fromAccount;
         private string toAccount;
+        string balance1, balance2, balance3;
+        double balance;
 
         public Transfer2(string fromAccount, string toAccount )
         {
@@ -32,19 +34,45 @@ namespace HC3_A2
 
             accountLabel.Text = fromAccount;
             accountLabel2.Text = toAccount;
+
+            string accountString = fromAccount.Split(' ')[0].ToLower();
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            file.ReadLine();
+            file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            file.Close();
+
+            if (accountString == "chequing")
+            {
+                balance = Convert.ToDouble(balance1);
+            }
+            else if (accountString == "savings")
+            {
+                balance = Convert.ToDouble(balance2);
+            }
+            else if (accountString == "other")
+            {
+                balance = Convert.ToDouble(balance3);
+            }
         }
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
             string amount = digitDisplay.Text;
-
+            double amount2 = Convert.ToDouble(amount.Substring(2));
             string[] testAmount = amount.Split('.');
-            // Null and muliple decimal check
-            if (amount.Length > 2 && testAmount.Length <= 2)
+
+            if (amount2 > balance)
+                // Higher amount than balance
+                errorMsgLimit.Visibility = Visibility.Visible;
+            else if (amount.Length <= 2)
+                // Null
+                errorMsgValid.Visibility = Visibility.Visible;
+            else
                 // Continue to confirm page
                 this.NavigationService.Navigate(new HC3_A2.Transfer3(fromAccount, toAccount, amount));
-            else
-                errorMsg.Visibility = Visibility.Visible;
         }
         private void back_click(object sender, RoutedEventArgs e)
         {
@@ -57,30 +85,32 @@ namespace HC3_A2
         {
             bool containsDecimal = digitDisplay.Text.Contains('.');
 
+            errorMsgValid.Visibility = Visibility.Hidden;
+            errorMsgLimit.Visibility = Visibility.Hidden;
+
             Button button = sender as Button;
             switch (button.CommandParameter.ToString())
             {
                 case "BACK":
-                    errorMsg.Visibility = Visibility.Hidden;
                     if (digitDisplay.Text.Length > 2)
                         digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
                     break;
 
                 case "NUMPAD.":
                     if (!containsDecimal)
+                    {
+                        if (digitDisplay.Text.Length == 2)
+                            digitDisplay.Text += "0";
                         digitDisplay.Text += button.Content.ToString();
-                    else
-                        errorMsg.Visibility = Visibility.Visible;
+                    }
+
                     break;
 
                 default:
                     if (!containsDecimal || digitDisplay.Text.Split('.')[1].Length < 2)
                     {
                         digitDisplay.Text += button.Content.ToString();
-                        errorMsg.Visibility = Visibility.Hidden;
                     }
-                    else
-                        errorMsg.Visibility = Visibility.Visible;
                     break;
             }
         }
