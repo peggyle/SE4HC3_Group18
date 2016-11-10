@@ -20,19 +20,56 @@ namespace HC3_A2
     /// </summary>
     public partial class EnterPIN : Page
     {
+        string pin1, pin2, pin3, pin4;
+        string bankNumber, pin, balance;
+        int numWrong;
+
         public EnterPIN()
         {
             InitializeComponent();
+
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance = file.ReadLine();
+
         }
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0)
-                errorMsg.Visibility = Visibility.Visible;
-
+            {
+                errorMsgWrongNum.Visibility = Visibility.Visible;
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+            }
             else
-                this.NavigationService.Navigate(new HC3_A2.MainPage());
+            {
+                string enteredPin = pin1 + pin2 + pin3 + pin4;
+                if (enteredPin == pin)
+                    this.NavigationService.Navigate(new HC3_A2.MainPage());
+                else
+                {
+                    errorMsgWrongPIN.Visibility = Visibility.Visible;
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    numWrong++;
+                    if (numWrong == 3)
+                    {
+                        this.NavigationService.Navigate(new HC3_A2.InsertCard());
+                    }
+                }
+                    
+
+            }
+                
         }
+
         private void back_click(object sender, RoutedEventArgs e)
         {
             // Return to welcome page
@@ -42,14 +79,33 @@ namespace HC3_A2
         // Number pad
         private void number_click(object sender, RoutedEventArgs e)
         {
+            errorMsgWrongNum.Visibility = Visibility.Collapsed;
+            errorMsgWrongPIN.Visibility = Visibility.Collapsed;
+
             Button button = sender as Button;
 
             if (button.CommandParameter.ToString() == "BACK")
             {
-                if (textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
-                else if (textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
-                else if (textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
-                else if (textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                if (textBox4.Text.Length > 0)
+                {
+                    textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
+                    pin4 = "";
+                }
+                else if (textBox3.Text.Length > 0)
+                {
+                    textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+                    pin3 = "";
+                }
+                else if (textBox2.Text.Length > 0)
+                {
+                    textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                    pin2 = "";
+                }
+                else if (textBox1.Text.Length > 0)
+                {
+                    textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                    pin1 = "";
+                }
                 /*
                 else
                 {
@@ -62,21 +118,25 @@ namespace HC3_A2
             {
                 // textBox1.Text += button.Content.ToString();
                 textBox1.Text += "♦";
+                pin1 = button.Content.ToString();
             }
             else if (textBox2.Text.Length == 0)
             {
                 // textBox2.Text += button.Content.ToString();
                 textBox2.Text += "♦";
+                pin2 = button.Content.ToString();
             }
             else if (textBox3.Text.Length == 0)
             {
                 // textBox3.Text += button.Content.ToString();
                 textBox3.Text += "♦";
+                pin3 = button.Content.ToString();
             }
             else if (textBox4.Text.Length == 0)
             {
                 // textBox4.Text += button.Content.ToString();
                 textBox4.Text += "♦";
+                pin4 = button.Content.ToString();
             }
             /*
             else
