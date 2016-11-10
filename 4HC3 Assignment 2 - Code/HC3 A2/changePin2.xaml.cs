@@ -20,16 +20,24 @@ namespace HC3_A2
     /// </summary>
     public partial class changePin2 : Page
     {
-        string pin1, pin2, pin3, pin4, pin;
+        string pin1, pin2, pin3, pin4;
+        string bankNumber, pin, balance1, balance2, balance3;
         int numWrong;
+        int bankNumberFlag;
 
         public changePin2()
         {
             InitializeComponent();
 
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
-            string placeholder = file.ReadLine();
+            bankNumber = file.ReadLine();
             pin = file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            this.bankNumberFlag = Int32.Parse(file.ReadLine());
+            file.Close();
+
         }
 
         private void button2_click(object sender, RoutedEventArgs e)
@@ -78,9 +86,17 @@ namespace HC3_A2
                     textBox3.Text = "";
                     textBox4.Text = "";
                     numWrong++;
-                    if (numWrong == 3)
+                    if (numWrong == 1)
                     {
-                        this.NavigationService.Navigate(new HC3_A2.InsertCard());
+                        errorMsgWrongPIN.Text = "Please enter the correct PIN. You have 2 more tries.";
+                    }
+                    else if (numWrong == 2)
+                    {
+                        errorMsgWrongPIN.Text = "Please enter the correct PIN. You have 1 more try.";
+                    }
+                    else if (numWrong == 3)
+                    {
+                        this.NavigationService.Navigate(new HC3_A2.WrongPIN(bankNumberFlag));
                     }
                 }
             }
