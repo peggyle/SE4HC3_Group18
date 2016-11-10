@@ -20,9 +20,15 @@ namespace HC3_A2
     /// </summary>
     public partial class CheckAccount2 : Page
     {
-        public CheckAccount2()
+        private string account;
+
+        public CheckAccount2(string account)
         {
             InitializeComponent();
+
+            this.account = account;
+
+            textLabel.Text = account;
         }
         private void button_print_Click(object sender, RoutedEventArgs e)
         {
@@ -34,11 +40,6 @@ namespace HC3_A2
         {
             CheckAccount1 p1 = new CheckAccount1();
             this.NavigationService.Navigate(p1);
-        }
-
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)

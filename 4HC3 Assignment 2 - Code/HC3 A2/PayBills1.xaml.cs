@@ -28,9 +28,9 @@ namespace HC3_A2
             InitializeComponent();
 
             accountOptions = new List<string>();
-            accountOptions.Add("Chequings - $ 123,456,789.01");
-            accountOptions.Add("Savings 1 - $ 123,456,789.01");
-            accountOptions.Add("Savings 2 - $ 111,111,111.11");
+            accountOptions.Add("SAVINGS ACCOUNT 123654128 - $2000.00");
+            accountOptions.Add("CHEQUING ACCOUNT 4645516846 - $30000.00");
+            accountOptions.Add("OTHER ACCOUNT 678456484 - $2554.00");
 
             payeeOptions = new List<string>();
             payeeOptions.Add("UTILITIES COMPANY - 11111111");

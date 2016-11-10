@@ -23,7 +23,7 @@
 
         <TextBlock Text="If you do not have your card, enter your bank number here" Width="150" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 35 120"
                    TextWrapping="Wrap" TextAlignment="Center" FontSize="15" FontFamily="Arial"/>
-        <Button x:Name="bankEntryButton" Content="       Enter&#xA;Bank Number" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="bankEntryClick" FontSize="15" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="bankEntryButton" Content="       Enter&#xA;Bank Number" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="bankEntryClick" FontSize="14" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

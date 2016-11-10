@@ -20,9 +20,18 @@ namespace HC3_A2
     /// </summary>
     public partial class CheckAccount1 : Page
     {
+        List<string> accountOptions;
+
         public CheckAccount1()
         {
             InitializeComponent();
+
+            accountOptions = new List<string>();
+            accountOptions.Add("SAVINGS ACCOUNT 123654128 - $2000.00");
+            accountOptions.Add("CHEQUING ACCOUNT 4645516846 - $30000.00");
+            accountOptions.Add("OTHER ACCOUNT 678456484 - $2554.00");
+
+            accountDropdown.ItemsSource = accountOptions;
         }
 
         private void button_click(object sender, RoutedEventArgs e)
@@ -32,17 +41,15 @@ namespace HC3_A2
         }
         private void button_click_1(object sender, RoutedEventArgs e)
         {
-            CheckAccount2 p2 = new CheckAccount2();
-            this.NavigationService.Navigate(p2);
-        }
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+            Object account = accountDropdown.SelectedValue;
 
-        }
-
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-
+            // Null check
+            if (account != null)
+                // Navigate to next page (view statement)
+                this.NavigationService.Navigate(new HC3_A2.CheckAccount2(account.ToString()));
+            else
+                // Display error
+                errorMsg.Visibility = Visibility.Visible;
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)

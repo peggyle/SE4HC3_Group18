@@ -15,9 +15,18 @@
         <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Choose account:"  Margin="0,138,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Width="264"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Withdraw"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
+<<<<<<< Updated upstream
         <ComboBox HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Width="249" Height="58" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="SAVING ACCOUNT" HorizontalAlignment="Left" Width="247.333333333333" FontSize="24"/>
             <ComboBoxItem Content="CHEQUING ACCOUNT" HorizontalAlignment="Left" Width="247.333333333333" FontSize="24"/>
+=======
+        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,156,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose an account:"/>
+
+        <ComboBox x:Name="comboBox"  HorizontalAlignment="Left" Margin="75,272,0,0" VerticalAlignment="Top" Width="641" Height="58" FontSize="20" SelectionChanged="comboBox_SelectionChanged">
+            <ComboBoxItem x:Name="saving"   Content="SAVEING ACCOUNT  123654128  Balance $2000.00" HorizontalAlignment="Left" Width="631" Selected="ComboBoxItem_Selected_1"/>
+            <ComboBoxItem x:Name="chequing"  Content="CHEQUING ACCOUNT  4645516846  Balance $30000.00" HorizontalAlignment="Left" Width="631" Selected="ComboBoxItem_Selected"/>
+            <ComboBoxItem x:Name="other" Content="OTHER ACCOUNT  678456484  Balance $2554.00 " HorizontalAlignment="Left" Width="635" Selected="ComboBoxItem_Selected_2"/>
+>>>>>>> Stashed changes
         </ComboBox>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="Button_Click_1" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">

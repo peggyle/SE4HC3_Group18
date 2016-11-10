@@ -30,7 +30,7 @@ namespace HC3_A2
             
         }
 
-        
+
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -39,7 +39,30 @@ namespace HC3_A2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< Updated upstream
            this.NavigationService.Navigate(new HC3_A2.Withdraw2());
+=======
+
+            if (comboBox.SelectedItem == saving)
+            {
+                this.NavigationService.Navigate(new HC3_A2.Wsaving());
+            }
+
+            if (comboBox.SelectedItem == chequing)
+            {
+                this.NavigationService.Navigate(new HC3_A2.Withdraw2());
+            }
+
+            if (comboBox.SelectedItem == other)
+            {
+                this.NavigationService.Navigate(new HC3_A2.Wother());
+            }
+
+            else
+
+                errorMsg.Visibility = Visibility.Visible;
+
+>>>>>>> Stashed changes
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
@@ -58,6 +81,31 @@ namespace HC3_A2
             b.RenderTransform = trans;
         }
 
+<<<<<<< Updated upstream
+=======
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ComboBoxItem_Selected_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+>>>>>>> Stashed changes
 
     }
 

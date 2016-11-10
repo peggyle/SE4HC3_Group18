@@ -9,17 +9,36 @@
       Title="changePin3">
 
     <Grid>
+<<<<<<< Updated upstream
         <Button x:Name="button_logout" Content="Log Out" HorizontalAlignment="Left" Margin="51,479,0,0" VerticalAlignment="Top" Width="153" Height="81" FontFamily="Arial Black" FontSize="18" Click="button_click">
+=======
+        <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
+        <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Confirmation"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="PIN successfully changed"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+
+        <Button x:Name="transc" Content="More Transaction" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,275"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+>>>>>>> Stashed changes
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+<<<<<<< Updated upstream
         <Label x:Name="label" Content="PIN changed Successfully" HorizontalAlignment="Left" Height="66" Margin="51,145,0,0" VerticalAlignment="Top" Width="498" FontFamily="Arial" FontSize="36"/>
         <Button x:Name="button_moreAction" Content="More Actions" HorizontalAlignment="Left" Margin="581,479,0,0" VerticalAlignment="Top" Width="153" Click="button_click_1" Height="81" FontFamily="Arial Black" FontSize="18">
+=======
+        <Button Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,125"  Width="374" Height="75" Click="logout" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+>>>>>>> Stashed changes
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+<<<<<<< Updated upstream
 
+=======
+        
+>>>>>>> Stashed changes
     </Grid>
 </Page>

@@ -14,6 +14,7 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Bank Number Entry"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
+<<<<<<< Updated upstream:4HC3%20Assignment%202%20-%20Code/EnterBankNumber.xaml
         <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter your bank number"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
@@ -26,6 +27,13 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+=======
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter new PIN"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+
+        <!--
+        <Label x:Name="label" Content="New PIN" HorizontalAlignment="Left" Height="57" Margin="80,130,0,0" VerticalAlignment="Top" Width="159" FontFamily="Arial" FontSize="36" RenderTransformOrigin="0.491,0.702"/>
+        -->
+>>>>>>> Stashed changes:4HC3 Assignment 2 - Code/HC3 A2/changePin4.xaml
 
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>
@@ -89,5 +97,24 @@
             </Grid>
         </Grid>
 
+<<<<<<< Updated upstream:4HC3%20Assignment%202%20-%20Code/EnterBankNumber.xaml
+=======
+        <Button x:Name="button2_0" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="button2_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="button" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="button_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <TextBox x:Name="textBox1" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="250,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox2" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="327,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox3" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="402,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox4" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="475,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+
+>>>>>>> Stashed changes:4HC3 Assignment 2 - Code/HC3 A2/changePin4.xaml
     </Grid>
 </Page>
