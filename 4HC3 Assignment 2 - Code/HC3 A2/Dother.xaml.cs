@@ -16,35 +16,28 @@ using System.Windows.Shapes;
 namespace HC3_A2
 {
     /// <summary>
-    /// Interaction logic for Page10.xaml
+    /// Interaction logic for Dother.xaml
     /// </summary>
-    public partial class Transfer3 : Page
+    public partial class Dother : Page
     {
-        private string fromAccount;
-        private string toAccount;
-        private string amount;
-
-        public Transfer3(string fromAccount, string toAccount, string amount)
+        public Dother()
         {
             InitializeComponent();
-
-            this.fromAccount = fromAccount;
-            this.toAccount = toAccount;
-            this.amount = amount;
-
-            amountLabel.Text = amount;
-            fromAccountLabel.Text = fromAccount;
-            toAccountLabel.Text = toAccount;
         }
 
-        // Buttons
-        private void ok_click(object sender, RoutedEventArgs e) {
-            // Continue to success page
+        private void back_Button(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HC3_A2.deposit());
+        }
+
+        private void OkButton(object sender, RoutedEventArgs e)
+        {
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }
-        private void back_click(object sender, RoutedEventArgs e) {
-            // Return to amount selection page
-            this.NavigationService.Navigate(new HC3_A2.Transfer2(fromAccount, toAccount));
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
@@ -54,6 +47,7 @@ namespace HC3_A2
             TranslateTransform trans = new TranslateTransform(3, 3);
             b.RenderTransform = trans;
         }
+
         private void buttonReleased(object sender, RoutedEventArgs e)
         {
             Button b = e.Source as Button;
@@ -61,5 +55,6 @@ namespace HC3_A2
             TranslateTransform trans = new TranslateTransform(-3, -3);
             b.RenderTransform = trans;
         }
+
     }
 }

@@ -25,10 +25,6 @@ namespace HC3_A2
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
 
 
 
@@ -39,9 +35,6 @@ namespace HC3_A2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< Updated upstream
-           this.NavigationService.Navigate(new HC3_A2.Withdraw2());
-=======
 
             if (comboBox.SelectedItem == saving)
             {
@@ -62,7 +55,6 @@ namespace HC3_A2
 
                 errorMsg.Visibility = Visibility.Visible;
 
->>>>>>> Stashed changes
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
@@ -81,8 +73,6 @@ namespace HC3_A2
             b.RenderTransform = trans;
         }
 
-<<<<<<< Updated upstream
-=======
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -105,7 +95,6 @@ namespace HC3_A2
 
 
 
->>>>>>> Stashed changes
 
     }
 

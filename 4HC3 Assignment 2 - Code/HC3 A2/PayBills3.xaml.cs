@@ -40,7 +40,7 @@ namespace HC3_A2
         // Buttons
         private void ok_click(object sender, RoutedEventArgs e) {
             // Continue to success page
-            this.NavigationService.Navigate(new HC3_A2.Success());
+            this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }
         private void back_click(object sender, RoutedEventArgs e) {
             // Return to amount selection page

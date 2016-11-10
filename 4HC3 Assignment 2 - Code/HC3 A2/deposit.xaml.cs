@@ -34,9 +34,6 @@ namespace HC3_A2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< Updated upstream
-            NavigationService.Navigate(new HC3_A2.deposit2());
-=======
 
 
 
@@ -60,7 +57,6 @@ namespace HC3_A2
             else
 
                 errorMsg.Visibility = Visibility.Visible;
->>>>>>> Stashed changes
         }
 
         private void back_Button(object sender, RoutedEventArgs e)
@@ -86,8 +82,6 @@ namespace HC3_A2
             b.RenderTransform = trans;
         }
 
-<<<<<<< Updated upstream
-=======
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
 
@@ -104,6 +98,5 @@ namespace HC3_A2
         }
 
 
->>>>>>> Stashed changes
     }
 }

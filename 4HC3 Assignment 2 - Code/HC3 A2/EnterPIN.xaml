@@ -14,7 +14,7 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="PIN Entry"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter your PIN"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter your PIN:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
@@ -26,6 +26,12 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+
+        <TextBlock x:Name="errorMsgWrongPIN" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please enter correct PIN."/></TextBlock>
+
+        <TextBlock x:Name="errorMsgWrongNum" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please enter four digits."/></TextBlock>
 
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>
@@ -42,13 +48,9 @@
                 <ColumnDefinition Width="95"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.ColumnSpan="3">
-                <Border BorderThickness="1" BorderBrush="Black">
-                    <TextBlock Name="digitDisplay" TextAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial" Text=""/>
-                </Border>
-            </Grid>
+            <Grid Grid.ColumnSpan="3"/>
             <Grid Grid.Column="3">
-                <Button CommandParameter="BACK" Click="number_click">
+                <Button CommandParameter="BACK" Click="number_click" Margin="0,50,0,-50">
                     <Path Stretch="Fill" Width="36" Height="24" Data="F1M555.0371,274.4893L552.7871,276.7383L549.9861,273.9373L547.1991,276.7243L545.1131,274.6393L547.9001,271.8523L545.0101,268.9603L547.2601,266.7113L550.1501,269.6023L552.8921,266.8613L554.9761,268.9463L552.2361,271.6883z M555.3751,264.0003L544.8751,264.0003C543.1251,264.1253,535.0001,270.7503,535.0001,272.2503C535.0001,273.7503,543.1251,279.3753,544.8751,279.5003L555.3751,279.5003C558.8751,279.5003,559.3751,277.7093,559.3751,275.5003L559.3751,268.0003C559.3751,265.7913,558.7501,264.0003,555.3751,264.0003" Fill="#FF333333"/>
                 </Button>
             </Grid>
@@ -82,7 +84,13 @@
             <Grid Grid.ColumnSpan="3" Grid.Row="4">
                 <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number_click" FontSize="30" FontFamily="Arial">0</Button>
             </Grid>
+            <Grid Grid.Column="2" Grid.Row="4"/>
         </Grid>
+        
+        <TextBox x:Name="textBox1" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="55" Margin="250,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox2" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="327,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox3" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="402,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
+        <TextBox x:Name="textBox4" IsReadOnly="True" TextAlignment="Center" HorizontalAlignment="Left" Height="54" Margin="475,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" FontFamily="Arial Black" FontSize="48" MaxLength="1" MaxLines="1"/>
 
     </Grid>
 </Page>

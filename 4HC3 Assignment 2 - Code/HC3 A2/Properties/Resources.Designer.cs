@@ -81,8 +81,6 @@ namespace HC3_A2.Properties {
         }
         
         /// <summary>
-<<<<<<< Updated upstream
-=======
         ///   Looks up a localized string similar to 20161110.
         /// </summary>
         internal static string bankNumber {
@@ -92,7 +90,6 @@ namespace HC3_A2.Properties {
         }
         
         /// <summary>
->>>>>>> Stashed changes
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Beep {
@@ -110,8 +107,6 @@ namespace HC3_A2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-<<<<<<< Updated upstream
-=======
         
         /// <summary>
         ///   Looks up a localized string similar to 2016.
@@ -132,6 +127,5 @@ namespace HC3_A2.Properties {
                 return ResourceManager.GetString("userinfo", resourceCulture);
             }
         }
->>>>>>> Stashed changes
     }
 }
