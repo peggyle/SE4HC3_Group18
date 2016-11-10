@@ -111,7 +111,7 @@ namespace HC3_A2
             if (display.Text.Length > 0)
             {
                 string amount = display.Text;
-                this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount));
+                this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount,"chequing"));
             }
 
             else

@@ -48,7 +48,7 @@
 
             <Grid Grid.ColumnSpan="3">
                 <Border BorderThickness="1" BorderBrush="Black">
-                    <TextBlock Name="display" TextAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial" Text=""/>
+                    <TextBlock Name="display" TextAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial" Text="$"/>
                 </Border>
             </Grid>
             <Grid Grid.Column="3">
