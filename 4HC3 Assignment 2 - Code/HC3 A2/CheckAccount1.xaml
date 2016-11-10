@@ -24,8 +24,8 @@
             -->
         </ComboBox>
 
-        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please select"/><LineBreak/><Run Text="an account"/></TextBlock>
+        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red"
+                   Text="Please select an account"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="button_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>

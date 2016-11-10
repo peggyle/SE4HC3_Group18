@@ -23,6 +23,8 @@ namespace HC3_A2
         public CheckAccount3()
         {
             InitializeComponent();
+
+            MessageBox.Show("Simulated printing of account statements");
         }
 
        

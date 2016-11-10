@@ -22,8 +22,8 @@
             <ComboBoxItem x:Name="other" Content="OTHER ACCOUNT - 678456484 - $2,554.00 " HorizontalAlignment="Left" Width="635" Selected="ComboBoxItem_Selected_2"/>
         </ComboBox>
 
-        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please Choose Account"/></TextBlock>
+        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red"
+                   Text="Please select an account"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="Button_Click_1" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>

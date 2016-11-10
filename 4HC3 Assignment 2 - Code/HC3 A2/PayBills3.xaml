@@ -12,7 +12,7 @@
         <Rectangle Fill="#83002B" HorizontalAlignment="Center" Height="90" VerticalAlignment="Top" Width="800"/>
         <TextBlock x:Name="perkxLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="PErKX"  Margin="0,5,15,0" FontSize="50" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
-        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Pay Bills"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
+        <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Confirmation"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
         <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Are you sure you wish to:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
