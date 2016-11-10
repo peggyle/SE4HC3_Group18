@@ -14,11 +14,17 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Change PIN"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter old PIN"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter old PIN:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
         
         <!--
         <Label x:Name="label_Copy" Content="Old PIN" HorizontalAlignment="Left" Height="54" Margin="80,130,0,0" VerticalAlignment="Top" Width="140" FontFamily="Arial" FontSize="36"/>
         -->
+
+        <TextBlock x:Name="errorMsgWrongPIN" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please enter correct PIN."/></TextBlock>
+
+        <TextBlock x:Name="errorMsgWrongNum" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please enter four digits."/></TextBlock>
 
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>

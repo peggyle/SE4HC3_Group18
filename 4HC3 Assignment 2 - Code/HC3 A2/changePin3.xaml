@@ -16,7 +16,7 @@
 
         <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="PIN successfully changed"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
-        <Button x:Name="transc" Content="More Transaction" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,275"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="transc" Content="More Transactions" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,275"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

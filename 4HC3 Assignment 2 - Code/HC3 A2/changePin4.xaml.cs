@@ -37,9 +37,11 @@ namespace HC3_A2
         {
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0)
             {
+                /*
                 MessageBox.Show("Change PIN is not complete",
                  "Important Message");
-
+                 */
+                errorMsgWrongNum.Visibility = Visibility.Visible;
             }
             else
             {
@@ -57,11 +59,12 @@ namespace HC3_A2
                 else if (textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
                 else if (textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
                 else if (textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
-                else{
+                /*
+                else {
                     MessageBox.Show("No more to delete",
                "Important Message");
                 }
-
+                */
             }
             else if (textBox1.Text.Length == 0)
             {
@@ -83,10 +86,12 @@ namespace HC3_A2
                 // textBox4.Text += button.Content.ToString();
                 textBox4.Text += "♦";
             }
+            /*
             else
             { 
             MessageBox.Show("PIN can only be 4 digits.", "Message");
             }
+            */
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)

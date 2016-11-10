@@ -14,17 +14,17 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Change PIN"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Choose a security question"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Choose a security question:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
         <ComboBox x:Name="SecurityQuestionDropDown" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="60" Margin="0,175,0,0"  FontSize="28" FontFamily="Arial" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem Content="Question1: xxxxxxxxxxxxxxxxxxxxxxxxxxxx" HorizontalAlignment="Left" Width="608" FontSize="24" FontFamily="Arial"/>
             <ComboBoxItem Content="Question2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" HorizontalAlignment="Left" Width="608" FontSize="24" FontFamily="Arial"/>
         </ComboBox>
 
-        <RadioButton x:Name="radioButton" Content="Choice A" HorizontalAlignment="Left" Margin="100,260,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="17" Width="83"/>
-        <RadioButton x:Name="radioButton1" Content="Choice B" HorizontalAlignment="Left" Margin="100,340,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="radioButton2" Content="Choice C" HorizontalAlignment="Left" Margin="100,380,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <RadioButton x:Name="radioButton3" Content="Choice D" HorizontalAlignment="Left" Margin="100,300,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="radioButton" Content="Choice A" HorizontalAlignment="Left" Margin="100,260,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="28" FontFamily="Arial"/>
+        <RadioButton x:Name="radioButton3" Content="Choice B" HorizontalAlignment="Left" Margin="100,300,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="28" FontFamily="Arial"/>
+        <RadioButton x:Name="radioButton1" Content="Choice C" HorizontalAlignment="Left" Margin="100,340,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="28" FontFamily="Arial"/>
+        <RadioButton x:Name="radioButton2" Content="Choice D" HorizontalAlignment="Left" Margin="100,380,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="28" FontFamily="Arial"/>
 
         <Button x:Name="button" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="button_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
