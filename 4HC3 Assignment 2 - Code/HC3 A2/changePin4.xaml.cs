@@ -20,10 +20,10 @@ namespace HC3_A2
     /// </summary>
     public partial class changePin4 : Page
     {
-        //int rowNum;
+        string pin1, pin2, pin3, pin4;
+
         public changePin4()
         {
-            // this.rowNum = Int32.Parse(rowNum) - 1;
             InitializeComponent();
         }
 
@@ -37,30 +37,54 @@ namespace HC3_A2
         {
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0)
             {
-                /*
-                MessageBox.Show("Change PIN is not complete",
-                 "Important Message");
-                 */
                 errorMsgWrongNum.Visibility = Visibility.Visible;
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
             }
             else
             {
-                changePin3 confirm = new changePin3();
-                this.NavigationService.Navigate(confirm);
+                // StreamWriter code here
+                // to save new PIN
+
+                this.NavigationService.Navigate(new HC3_A2.changePin3());
             }
         }
+
+        // Number pad
         private void number_click(object sender, RoutedEventArgs e)
         {
+            errorMsgWrongNum.Visibility = Visibility.Collapsed;
+            errorMsgWrongPIN.Visibility = Visibility.Collapsed;
+
             Button button = sender as Button;
 
             if (button.CommandParameter.ToString() == "BACK")
             {
-                if (textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
-                else if (textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
-                else if (textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
-                else if (textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                if (textBox4.Text.Length > 0)
+                {
+                    textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
+                    pin4 = "";
+                }
+                else if (textBox3.Text.Length > 0)
+                {
+                    textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+                    pin3 = "";
+                }
+                else if (textBox2.Text.Length > 0)
+                {
+                    textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                    pin2 = "";
+                }
+                else if (textBox1.Text.Length > 0)
+                {
+                    textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                    pin1 = "";
+                }
                 /*
-                else {
+                else
+                {
                     MessageBox.Show("No more to delete",
                "Important Message");
                 }
@@ -70,26 +94,30 @@ namespace HC3_A2
             {
                 // textBox1.Text += button.Content.ToString();
                 textBox1.Text += "♦";
+                pin1 = button.Content.ToString();
             }
             else if (textBox2.Text.Length == 0)
             {
                 // textBox2.Text += button.Content.ToString();
                 textBox2.Text += "♦";
+                pin2 = button.Content.ToString();
             }
             else if (textBox3.Text.Length == 0)
             {
                 // textBox3.Text += button.Content.ToString();
                 textBox3.Text += "♦";
+                pin3 = button.Content.ToString();
             }
             else if (textBox4.Text.Length == 0)
             {
                 // textBox4.Text += button.Content.ToString();
                 textBox4.Text += "♦";
+                pin4 = button.Content.ToString();
             }
             /*
             else
-            { 
-            MessageBox.Show("PIN can only be 4 digits.", "Message");
+            {
+                MessageBox.Show("PIN can only be 4 digits.", "Message");
             }
             */
         }

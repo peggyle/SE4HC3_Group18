@@ -20,11 +20,16 @@ namespace HC3_A2
     /// </summary>
     public partial class changePin2 : Page
     {
-        //int rowNum;
+        string pin1, pin2, pin3, pin4, pin;
+        int numWrong;
+
         public changePin2()
         {
-           // this.rowNum = Int32.Parse(rowNum) - 1;
             InitializeComponent();
+
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            string placeholder = file.ReadLine();
+            pin = file.ReadLine();
         }
 
         private void button2_click(object sender, RoutedEventArgs e)
@@ -33,15 +38,13 @@ namespace HC3_A2
             this.NavigationService.Navigate(back);
         }
 
+        /*
         private void button_click(object sender, RoutedEventArgs e)
         {
             if (textBox1.Text.Length==0 || textBox2.Text.Length == 0|| textBox3.Text.Length == 0|| textBox4.Text.Length == 0)
             {
-                /*
                 MessageBox.Show("Change PIN is not complete",
                  "Important Message");
-                 */
-                errorMsgWrongNum.Visibility = Visibility.Visible;
             }
             else
             {
@@ -49,48 +52,105 @@ namespace HC3_A2
                 this.NavigationService.Navigate(confirm);
             }
         }
+        */
+
+        private void button_click(object sender, RoutedEventArgs e)
+        {
+            if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0)
+            {
+                errorMsgWrongNum.Visibility = Visibility.Visible;
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+            }
+            else
+            {
+                string enteredPin = pin1 + pin2 + pin3 + pin4;
+                if (enteredPin == pin)
+                    this.NavigationService.Navigate(new HC3_A2.changePin4());
+                else
+                {
+                    errorMsgWrongPIN.Visibility = Visibility.Visible;
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                    numWrong++;
+                    if (numWrong == 3)
+                    {
+                        this.NavigationService.Navigate(new HC3_A2.InsertCard());
+                    }
+                }
+            }
+        }
+
+        // Number pad
         private void number_click(object sender, RoutedEventArgs e)
         {
+            errorMsgWrongNum.Visibility = Visibility.Collapsed;
+            errorMsgWrongPIN.Visibility = Visibility.Collapsed;
+
             Button button = sender as Button;
-            
-            if (button.CommandParameter.ToString()== "BACK")
+
+            if (button.CommandParameter.ToString() == "BACK")
             {
-                if(textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
-                else if(textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
-                else if(textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
-                else if(textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                if (textBox4.Text.Length > 0)
+                {
+                    textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
+                    pin4 = "";
+                }
+                else if (textBox3.Text.Length > 0)
+                {
+                    textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+                    pin3 = "";
+                }
+                else if (textBox2.Text.Length > 0)
+                {
+                    textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                    pin2 = "";
+                }
+                else if (textBox1.Text.Length > 0)
+                {
+                    textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                    pin1 = "";
+                }
                 /*
-                else {
+                else
+                {
                     MessageBox.Show("No more to delete",
                "Important Message");
                 }
                 */
-
             }
             else if (textBox1.Text.Length == 0)
             {
-               // textBox1.Text += button.Content.ToString();
+                // textBox1.Text += button.Content.ToString();
                 textBox1.Text += "♦";
+                pin1 = button.Content.ToString();
             }
-            else if(textBox2.Text.Length == 0)
+            else if (textBox2.Text.Length == 0)
             {
-               // textBox2.Text += button.Content.ToString();
+                // textBox2.Text += button.Content.ToString();
                 textBox2.Text += "♦";
+                pin2 = button.Content.ToString();
             }
             else if (textBox3.Text.Length == 0)
             {
-               // textBox3.Text += button.Content.ToString();
+                // textBox3.Text += button.Content.ToString();
                 textBox3.Text += "♦";
+                pin3 = button.Content.ToString();
             }
             else if (textBox4.Text.Length == 0)
             {
-               // textBox4.Text += button.Content.ToString();
+                // textBox4.Text += button.Content.ToString();
                 textBox4.Text += "♦";
+                pin4 = button.Content.ToString();
             }
             /*
             else
             {
-                MessageBox.Show("PIN can only be 4 digits.","Message");
+                MessageBox.Show("PIN can only be 4 digits.", "Message");
             }
             */
         }
