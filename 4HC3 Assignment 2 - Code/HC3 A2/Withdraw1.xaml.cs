@@ -33,6 +33,7 @@ namespace HC3_A2
             balance1 = Convert.ToDouble(file.ReadLine());
             balance2 = Convert.ToDouble(file.ReadLine());
             balance3 = Convert.ToDouble(file.ReadLine());
+            file.Close();
 
             chequing.Content = String.Format("CHEQUING ACCOUNT - 4645516846 - {0:C2}", balance1);
             saving.Content = String.Format("SAVINGS ACCOUNT - 123654128 - {0:C2}", balance2);

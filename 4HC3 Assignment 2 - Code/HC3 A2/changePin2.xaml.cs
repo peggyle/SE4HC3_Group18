@@ -67,7 +67,7 @@ namespace HC3_A2
             {
                 string enteredPin = pin1 + pin2 + pin3 + pin4;
                 if (enteredPin == pin)
-                    this.NavigationService.Navigate(new HC3_A2.changePin4());
+                    this.NavigationService.Navigate(new HC3_A2.changePin4(pin));
                 else
                 {
                     errorMsgWrongPIN.Visibility = Visibility.Visible;
@@ -156,16 +156,23 @@ namespace HC3_A2
 
         private void buttonPressed(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
+            Button b = sender as Button;
             b.Effect = null;
             TranslateTransform trans = new TranslateTransform(3, 3);
             b.RenderTransform = trans;
         }
         private void buttonReleased(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
+            Button b = sender as Button;
             b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
             TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased2(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(0, 0);
             b.RenderTransform = trans;
         }
     }

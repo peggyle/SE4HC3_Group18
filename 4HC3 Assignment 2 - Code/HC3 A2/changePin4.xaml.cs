@@ -22,10 +22,13 @@ namespace HC3_A2
     {
         string pin1, pin2, pin3, pin4;
         string bankNumber, pin, balance1, balance2, balance3;
+        string oldpin;
 
-        public changePin4()
+        public changePin4(string oldpin)
         {
             InitializeComponent();
+
+            this.oldpin = oldpin;
 
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
             bankNumber = file.ReadLine();
@@ -54,18 +57,28 @@ namespace HC3_A2
             }
             else
             {
-                System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
-
                 pin = pin1 + pin2 + pin3 + pin4;
+                if (oldpin == pin)
+                {
+                    errorMsgWrongPIN.Visibility = Visibility.Visible;
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
+                } else
+                {
+                    System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
 
-                file.WriteLine(bankNumber);
-                file.WriteLine(pin);
-                file.WriteLine(balance1);
-                file.WriteLine(balance2);
-                file.WriteLine(balance3);
-                file.Close();
+                    file.WriteLine(bankNumber);
+                    file.WriteLine(pin);
+                    file.WriteLine(balance1);
+                    file.WriteLine(balance2);
+                    file.WriteLine(balance3);
+                    file.Close();
 
-                this.NavigationService.Navigate(new HC3_A2.changePin3());
+                    this.NavigationService.Navigate(new HC3_A2.changePin3());
+                }
+                
             }
         }
 
@@ -141,16 +154,23 @@ namespace HC3_A2
 
         private void buttonPressed(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
+            Button b = sender as Button;
             b.Effect = null;
             TranslateTransform trans = new TranslateTransform(3, 3);
             b.RenderTransform = trans;
         }
         private void buttonReleased(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
+            Button b = sender as Button;
             b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
             TranslateTransform trans = new TranslateTransform(-3, -3);
+            b.RenderTransform = trans;
+        }
+        private void buttonReleased2(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(0, 0);
             b.RenderTransform = trans;
         }
     }

@@ -17,12 +17,12 @@
         <!--
         <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,150,0,0" FontSize="36" FontFamily="Arial" FontWeight="Bold" Text="Amount to withdraw is:"/>
         -->
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Are you sure you wish to:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="You are about to:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
-        <TextBlock x:Name="withdrawLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,200,0,0" Text="Withdraw" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="numberLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,200,0,0" Text="$XXXX.XX" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,275,0,0" Text="From" FontSize="30" FontFamily="Arial"/>
-        <TextBlock x:Name="accountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,280,0,0" Text="Account A" FontSize="20" FontFamily="Arial"/>
+        <TextBlock x:Name="withdrawLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,200,0,0" Text="Withdraw" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="numberLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="255,200,0,0" Text="$XXXX.XX" FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="fromLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,275,0,0" Text="From" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="accountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="255,280,0,0" Text="Account A" FontSize="20" FontFamily="Arial"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>

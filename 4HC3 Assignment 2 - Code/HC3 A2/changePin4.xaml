@@ -14,14 +14,16 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Change PIN"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter new PIN:"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold">
+            Enter <Underline>NEW</Underline> PIN:
+        </TextBlock>
 
         <!--
         <Label x:Name="label" Content="New PIN" HorizontalAlignment="Left" Height="57" Margin="80,130,0,0" VerticalAlignment="Top" Width="159" FontFamily="Arial" FontSize="36" RenderTransformOrigin="0.491,0.702"/>
         -->
 
-        <TextBlock x:Name="errorMsgWrongPIN" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please enter correct PIN."/></TextBlock>
+        <TextBlock x:Name="errorMsgWrongPIN" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Foreground="Red" TextWrapping="Wrap" Width="400" TextAlignment="Center" Visibility="Hidden">
+            <Run Text="Please enter a PIN different from your old PIN."/></TextBlock>
 
         <TextBlock x:Name="errorMsgWrongNum" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
             <Run Text="Please enter four digits."/></TextBlock>
@@ -42,40 +44,98 @@
             </Grid.ColumnDefinitions>
 
             <Grid Grid.ColumnSpan="3"/>
-            <Grid Grid.Column="3">
-                <Button CommandParameter="BACK" Click="number_click" Margin="0,50,0,-50">
-                    <Path Stretch="Fill" Width="36" Height="24" Data="F1M555.0371,274.4893L552.7871,276.7383L549.9861,273.9373L547.1991,276.7243L545.1131,274.6393L547.9001,271.8523L545.0101,268.9603L547.2601,266.7113L550.1501,269.6023L552.8921,266.8613L554.9761,268.9463L552.2361,271.6883z M555.3751,264.0003L544.8751,264.0003C543.1251,264.1253,535.0001,270.7503,535.0001,272.2503C535.0001,273.7503,543.1251,279.3753,544.8751,279.5003L555.3751,279.5003C558.8751,279.5003,559.3751,277.7093,559.3751,275.5003L559.3751,268.0003C559.3751,265.7913,558.7501,264.0003,555.3751,264.0003" Fill="#FF333333"/>
+            <Grid Grid.Row="1">
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD1" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    1
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
                 </Button>
             </Grid>
-            <Grid Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD1" Click="number_click" FontSize="30" FontFamily="Arial">1</Button>
-            </Grid>
             <Grid Grid.Column="1" Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD2" Click="number_click" FontSize="30" FontFamily="Arial">2</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD2" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    2
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD3" Click="number_click" FontSize="30" FontFamily="Arial">3</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD3" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    3
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Row="2">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD4" Click="number_click" FontSize="30" FontFamily="Arial">4</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD4" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    4
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD5" Click="number_click" FontSize="30" FontFamily="Arial">5</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD5" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    5
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="2">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD6" Click="number_click" FontSize="30" FontFamily="Arial">6</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD6" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    6
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid  Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD7" Click="number_click" FontSize="30" FontFamily="Arial">7</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD7" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    7
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD8" Click="number_click" FontSize="30" FontFamily="Arial">8</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD8" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    8
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD9" Click="number_click" FontSize="30" FontFamily="Arial">9</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD9" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    9
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.ColumnSpan="3" Grid.Row="4">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number_click" FontSize="30" FontFamily="Arial">0</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number_click" FontSize="30" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    0
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Button CommandParameter="BACK" Click="number_click" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased2">
+                    <Button.Content>
+                        <StackPanel>
+                            <Path Stretch="Fill" Width="36" Height="24" Data="F1M555.0371,274.4893L552.7871,276.7383L549.9861,273.9373L547.1991,276.7243L545.1131,274.6393L547.9001,271.8523L545.0101,268.9603L547.2601,266.7113L550.1501,269.6023L552.8921,266.8613L554.9761,268.9463L552.2361,271.6883z M555.3751,264.0003L544.8751,264.0003C543.1251,264.1253,535.0001,270.7503,535.0001,272.2503C535.0001,273.7503,543.1251,279.3753,544.8751,279.5003L555.3751,279.5003C558.8751,279.5003,559.3751,277.7093,559.3751,275.5003L559.3751,268.0003C559.3751,265.7913,558.7501,264.0003,555.3751,264.0003" Fill="#FF333333"/>
+                            <TextBlock>Delete</TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="4"/>
         </Grid>

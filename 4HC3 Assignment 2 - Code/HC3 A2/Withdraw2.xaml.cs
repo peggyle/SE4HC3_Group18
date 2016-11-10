@@ -27,24 +27,30 @@ namespace HC3_A2
             InitializeComponent();
 
             this.account = account;
-            textLabel.Text = "Withdrawing from\n" + account;
+            accountLabel.Text = account;
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
+            Button b = sender as Button;
             b.Effect = null;
             TranslateTransform trans = new TranslateTransform(3, 3);
             b.RenderTransform = trans;
         }
         private void buttonReleased(object sender, RoutedEventArgs e)
         {
-            Button b = e.Source as Button;
+            Button b = sender as Button;
             b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
             TranslateTransform trans = new TranslateTransform(-3, -3);
             b.RenderTransform = trans;
         }
-
+        private void buttonReleased2(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            b.Effect = new System.Windows.Media.Effects.DropShadowEffect();
+            TranslateTransform trans = new TranslateTransform(0,0);
+            b.RenderTransform = trans;
+        }
 
         // Number pad
         private void number_click(object sender, RoutedEventArgs e)
@@ -81,17 +87,6 @@ namespace HC3_A2
                 errorMsg.Visibility = Visibility.Visible; 
            
         }
-
-
-
-
-
-
-
-
-
-
-
        
     }
 }
