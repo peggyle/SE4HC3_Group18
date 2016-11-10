@@ -29,7 +29,7 @@ namespace HC3_A2
             InitializeComponent();
 
             this.account = account;
-            textLabel.Text = "Depositing into\n" + account;
+            accountLabel.Text = account;
 
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
             bankNumber = file.ReadLine();
