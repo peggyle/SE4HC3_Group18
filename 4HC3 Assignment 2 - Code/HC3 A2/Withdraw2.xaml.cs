@@ -55,16 +55,32 @@ namespace HC3_A2
         // Number pad
         private void number_click(object sender, RoutedEventArgs e)
         {
+            bool containsDecimal = digitDisplay.Text.Contains('.');
+
             Button button = sender as Button;
             switch (button.CommandParameter.ToString())
             {
                 case "BACK":
+                    errorMsg.Visibility = Visibility.Hidden;
                     if (digitDisplay.Text.Length > 2)
                         digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
                     break;
 
+                case "NUMPAD.":
+                    if (!containsDecimal)
+                        digitDisplay.Text += button.Content.ToString();
+                    else
+                        errorMsg.Visibility = Visibility.Visible;
+                    break;
+
                 default:
-                    digitDisplay.Text += button.Content.ToString();
+                    if (!containsDecimal || digitDisplay.Text.Split('.')[1].Length < 2)
+                    {
+                        digitDisplay.Text += button.Content.ToString();
+                        errorMsg.Visibility = Visibility.Hidden;
+                    }
+                    else
+                        errorMsg.Visibility = Visibility.Visible;
                     break;
             }
         }
@@ -77,16 +93,15 @@ namespace HC3_A2
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
-            if (digitDisplay.Text.Length > 2)
-            {
-                string amount = digitDisplay.Text;
-                this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount, account));
-            }
+            string amount = digitDisplay.Text;
 
+            string[] testAmount = amount.Split('.');
+            // Null and muliple decimal check
+            if (amount.Length > 2 && testAmount.Length <= 2)
+                // Continue to confirm page
+                this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount, account));
             else
-                errorMsg.Visibility = Visibility.Visible; 
-           
+                errorMsg.Visibility = Visibility.Visible;
         }
-       
     }
 }
