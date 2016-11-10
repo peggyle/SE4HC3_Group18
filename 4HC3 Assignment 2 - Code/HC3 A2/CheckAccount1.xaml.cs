@@ -21,15 +21,25 @@ namespace HC3_A2
     public partial class CheckAccount1 : Page
     {
         List<string> accountOptions;
+        string bankNumber, pin;
+        double balance1, balance2, balance3;
 
         public CheckAccount1()
         {
             InitializeComponent();
 
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance1 = Convert.ToDouble(file.ReadLine());
+            balance2 = Convert.ToDouble(file.ReadLine());
+            balance3 = Convert.ToDouble(file.ReadLine());
+            file.Close();
+
             accountOptions = new List<string>();
-            accountOptions.Add("SAVINGS ACCOUNT 123654128 - $2000.00");
-            accountOptions.Add("CHEQUING ACCOUNT 4645516846 - $30000.00");
-            accountOptions.Add("OTHER ACCOUNT 678456484 - $2554.00");
+            accountOptions.Add(String.Format("CHEQUING ACCOUNT - 4645516846 - {0:C2}", balance1));
+            accountOptions.Add(String.Format("SAVINGS ACCOUNT - 123654128 - {0:C2}", balance2));
+            accountOptions.Add(String.Format("OTHER ACCOUNT - 678456484 - {0:C2}", balance3));
 
             accountDropdown.ItemsSource = accountOptions;
         }

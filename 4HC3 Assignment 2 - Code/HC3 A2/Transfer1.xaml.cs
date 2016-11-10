@@ -22,7 +22,7 @@ namespace HC3_A2
     {
         List<string> accountOptions;
         string bankNumber, pin;
-        int balance1, balance2, balance3;
+        double balance1, balance2, balance3;
 
         public Transfer1()
         {
@@ -31,9 +31,9 @@ namespace HC3_A2
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
             bankNumber = file.ReadLine();
             pin = file.ReadLine();
-            balance1 = Convert.ToInt32(file.ReadLine());
-            balance2 = Convert.ToInt32(file.ReadLine());
-            balance3 = Convert.ToInt32(file.ReadLine());
+            balance1 = Convert.ToDouble(file.ReadLine());
+            balance2 = Convert.ToDouble(file.ReadLine());
+            balance3 = Convert.ToDouble(file.ReadLine());
 
             accountOptions = new List<string>();
             accountOptions.Add(String.Format("CHEQUING ACCOUNT - 123654128 - {0:C2}", balance1));
