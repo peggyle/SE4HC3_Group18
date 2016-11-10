@@ -24,17 +24,17 @@
         -->
         
         <ListBox x:Name="listBox" HorizontalAlignment="Center" VerticalAlignment="Top" Height="200" Margin="0,225,0,0"  Width="680">
-            <ListBoxItem Content="Nov 07, 2016     ROGERS CABLE     -$80.00      1600.50"
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
                          FontSize="25" FontFamily="Arial"/>
-            <ListBoxItem Content="Nov 08, 2016     HOUSE OF GAME   -$78.00      1522.50"
-                         FontSize="25" FontFamily="Arial"/>
-            <ListBoxItem Content="Nov 10, 2016     CASH DEPOSIT      +$100.00    1622.50"
+            <ListBoxItem Content="TRANSACTION --------------------------------------------"
                          FontSize="25" FontFamily="Arial"/>
             <ListBoxItem Content="Nov 12, 2016     INTEREST PAID      +$0.02        1622.52"
                          FontSize="25" FontFamily="Arial"/>
-            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+            <ListBoxItem Content="Nov 10, 2016     CASH DEPOSIT      +$100.00    1622.50"
                          FontSize="25" FontFamily="Arial"/>
-            <ListBoxItem Content="TRANSACTION --------------------------------------------"
+            <ListBoxItem Content="Nov 08, 2016     HOUSE OF GAME   -$78.00      1522.50"
+                         FontSize="25" FontFamily="Arial"/>
+            <ListBoxItem Content="Nov 07, 2016     ROGERS CABLE     -$80.00      1600.50"
                          FontSize="25" FontFamily="Arial"/>
             <ListBoxItem Content="TRANSACTION --------------------------------------------"
                          FontSize="25" FontFamily="Arial"/>

@@ -14,14 +14,14 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Confirmation"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Statement printed successfully"  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Statement printed successfully."  Margin="0,110,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
 
-        <Button x:Name="transc" Content="More Transactions" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,275"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="transc" Content="Make Another Transaction" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,275"  Width="374" Height="75" Click="transaction" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button Content="Log Out" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,125"  Width="374" Height="75" Click="logout" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button Content="Finish Banking" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="198,0,0,125"  Width="374" Height="75" Click="logout" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

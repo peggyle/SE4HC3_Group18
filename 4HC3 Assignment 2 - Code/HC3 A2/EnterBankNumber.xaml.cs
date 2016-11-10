@@ -20,7 +20,8 @@ namespace HC3_A2
     /// </summary>
     public partial class EnterBankNumber : Page
     {
-        string bankNumber, pin, balance;
+        string bankNumber;
+        int bankNumberFlag;
 
         public EnterBankNumber()
         {
@@ -28,8 +29,13 @@ namespace HC3_A2
 
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
             bankNumber = file.ReadLine();
-            pin = file.ReadLine();
-            balance = file.ReadLine();
+            file.ReadLine();
+            file.ReadLine();
+            file.ReadLine();
+            file.ReadLine();
+            bankNumberFlag = Convert.ToInt32(file.ReadLine());
+            bankNumberFlag = 1;
+            file.Close();
         }
 
         private void ok_click(object sender, RoutedEventArgs e)
@@ -37,7 +43,7 @@ namespace HC3_A2
             if (digitDisplay.Text.Length  == 12 )
             {
                 if (digitDisplay.Text == bankNumber)
-                    this.NavigationService.Navigate(new HC3_A2.EnterPIN());
+                    this.NavigationService.Navigate(new HC3_A2.EnterPIN(bankNumberFlag));
                 else
                 {
                     errorMsgWrongAcc.Visibility = Visibility.Visible;

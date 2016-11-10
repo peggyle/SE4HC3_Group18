@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LogOut2.xaml.cs">
+      <DependentUpon>LogOut2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wother.xaml.cs">
       <DependentUpon>Wother.xaml</DependentUpon>
     </Compile>
@@ -108,6 +111,10 @@
     <Page Include="LogOut.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LogOut2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
