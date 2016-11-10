@@ -20,9 +20,20 @@ namespace HC3_A2
     /// </summary>
     public partial class MainPage : Page
     {
+        string bankNumber, pin, balance1, balance2, balance3;
+        int bankNumberFlag;
+
         public MainPage()
         {
             InitializeComponent();
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            bankNumberFlag = Convert.ToInt32(file.ReadLine());
+            file.Close();
         }
 
         private void click1(object sender, RoutedEventArgs e)
@@ -58,9 +69,15 @@ namespace HC3_A2
 
         private void back_click(object sender, RoutedEventArgs e)
         {
+            if (bankNumberFlag == 1)
+            {
+                this.NavigationService.Navigate(new HC3_A2.LogOut2());
+            } else
+            {
+                // Exit to farewell page
+                this.NavigationService.Navigate(new HC3_A2.LogOut());
+            }
             
-            // Exit to farewell page
-            this.NavigationService.Navigate(new HC3_A2.LogOut());
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)

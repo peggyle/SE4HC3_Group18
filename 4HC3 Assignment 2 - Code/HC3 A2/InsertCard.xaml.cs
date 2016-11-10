@@ -44,7 +44,7 @@ namespace HC3_A2
 
         private void insertCardClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.EnterPIN());
+            this.NavigationService.Navigate(new HC3_A2.EnterPIN(0));
         }
         private void bankEntryClick(object sender, RoutedEventArgs e)
         {

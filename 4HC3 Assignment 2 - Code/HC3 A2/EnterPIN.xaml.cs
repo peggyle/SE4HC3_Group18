@@ -21,17 +21,30 @@ namespace HC3_A2
     public partial class EnterPIN : Page
     {
         string pin1, pin2, pin3, pin4;
-        string bankNumber, pin, balance;
+        string bankNumber, pin, balance1, balance2, balance3;
         int numWrong;
+        int bankNumberFlag;
 
-        public EnterPIN()
+        public EnterPIN(int bankNumberFlag)
         {
             InitializeComponent();
-
+            this.bankNumberFlag = bankNumberFlag;
             System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
             bankNumber = file.ReadLine();
             pin = file.ReadLine();
-            balance = file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            file.Close();
+
+            if (bankNumberFlag == 1)
+            {
+                backButton.Content = "Back";
+            }
+            else
+            {
+                backButton.Content = "Exit";
+            }
 
         }
 
@@ -49,7 +62,18 @@ namespace HC3_A2
             {
                 string enteredPin = pin1 + pin2 + pin3 + pin4;
                 if (enteredPin == pin)
+                {
+                    System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
+                    file.WriteLine(bankNumber);
+                    file.WriteLine(pin);
+                    file.WriteLine(balance1);
+                    file.WriteLine(balance2);
+                    file.WriteLine(balance3);
+                    file.WriteLine(bankNumberFlag);
+                    file.Close();
+
                     this.NavigationService.Navigate(new HC3_A2.MainPage());
+                }
                 else
                 {
                     errorMsgWrongPIN.Visibility = Visibility.Visible;
@@ -71,8 +95,15 @@ namespace HC3_A2
 
         private void back_click(object sender, RoutedEventArgs e)
         {
-            // Return to welcome page
-            this.NavigationService.Navigate(new HC3_A2.InsertCard());
+            if (bankNumberFlag == 1)
+            {
+                this.NavigationService.Navigate(new HC3_A2.EnterBankNumber());
+            }
+            else
+            {
+                // Exit to farewell page
+                this.NavigationService.Navigate(new HC3_A2.LogOut());
+            }
         }
 
         // Number pad

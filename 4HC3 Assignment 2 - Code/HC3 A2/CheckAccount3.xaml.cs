@@ -20,9 +20,20 @@ namespace HC3_A2
     /// </summary>
     public partial class CheckAccount3 : Page
     {
+        string bankNumber, pin, balance1, balance2, balance3;
+        int bankNumberFlag;
+
         public CheckAccount3()
         {
             InitializeComponent();
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance1 = file.ReadLine();
+            balance2 = file.ReadLine();
+            balance3 = file.ReadLine();
+            bankNumberFlag = Convert.ToInt32(file.ReadLine());
+            file.Close();
 
             MessageBox.Show("Simulated printing of account statements");
         }
@@ -36,7 +47,15 @@ namespace HC3_A2
 
         private void logout(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.LogOut());
+            if (bankNumberFlag == 1)
+            {
+                this.NavigationService.Navigate(new HC3_A2.LogOut2());
+            }
+            else
+            {
+                // Exit to farewell page
+                this.NavigationService.Navigate(new HC3_A2.LogOut());
+            }
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
