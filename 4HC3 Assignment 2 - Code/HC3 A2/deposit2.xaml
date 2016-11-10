@@ -18,6 +18,7 @@
         <TextBlock x:Name="accountLabel" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="235,110,0,0" FontSize="20" FontFamily="Arial" Text="(Account)"/>
         
         <TextBlock x:Name="depositLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" TextWrapping="Wrap" FontWeight="Bold" Text="Please deposit your cash and/or cheque(s)." FontSize="30" FontFamily="Arial"/>
+        <TextBlock x:Name="pressOKLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,225,0,0" TextWrapping="Wrap" FontWeight="Bold" Text="Press OK when you are done." FontSize="30" FontFamily="Arial"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_Button" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
@@ -29,7 +30,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="backButton_Copy" Content="Cheque/Cash Insert Simulation" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="106,0,0,234"  Width="602" Height="60" Click="Button_Click_1" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="backButton_Copy" Content="Cheque/Cash Insert Simulation" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,300,0,0"  Width="602" Height="60" Click="Button_Click_1" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

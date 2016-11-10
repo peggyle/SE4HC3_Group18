@@ -18,16 +18,17 @@ namespace HC3_A2
     /// <summary>
     /// Interaction logic for LogOut.xaml
     /// </summary>
-    public partial class LogOut2 : Page
+    public partial class WrongPIN : Page
     {
         string bankNumber, pin, balance1, balance2, balance3;
         int bankNumberFlag;
         System.Windows.Threading.DispatcherTimer timer;
         int count = 10;
 
-        public LogOut2()
+        public WrongPIN(int bankNumberFlag)
         {
             InitializeComponent();
+            this.bankNumberFlag = bankNumberFlag;
 
             timerLabel.Text = String.Format("Exiting in {0} seconds.", count);
             count--;
@@ -38,7 +39,7 @@ namespace HC3_A2
             balance1 = file.ReadLine();
             balance2 = file.ReadLine();
             balance3 = file.ReadLine();
-            bankNumberFlag = Convert.ToInt32(file.ReadLine());
+            //bankNumberFlag = Convert.ToInt32(file.ReadLine());
             file.Close();
 
             timer = new System.Windows.Threading.DispatcherTimer();
@@ -51,7 +52,10 @@ namespace HC3_A2
         private void back_click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
-            this.NavigationService.Navigate(new HC3_A2.InsertCard());
+            if (bankNumberFlag == 1)
+                this.NavigationService.Navigate(new HC3_A2.LogOut2());
+            else
+                this.NavigationService.Navigate(new HC3_A2.LogOut());
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
@@ -74,29 +78,25 @@ namespace HC3_A2
             if (count == 0)
             {
                 timer.Stop();
-                System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
 
-                file.WriteLine(bankNumber);
-                file.WriteLine(pin);
-                file.WriteLine(balance1);
-                file.WriteLine(balance2);
-                file.WriteLine(balance3);
-                file.WriteLine(bankNumberFlag);
-                file.Close();
-
-                this.NavigationService.Navigate(new HC3_A2.InsertCard());
-            } else
+                if (bankNumberFlag == 1)
+                    this.NavigationService.Navigate(new HC3_A2.LogOut2());
+                else
+                    this.NavigationService.Navigate(new HC3_A2.LogOut());
+            }
+            else
             {
                 if (count == 1)
                 {
                     timerLabel.Text = String.Format("Exiting in {0} second.", count);
-                } else
+                }
+                else
                 {
                     timerLabel.Text = String.Format("Exiting in {0} seconds.", count);
                 }
                 count--;
             }
-            
+
         }
     }
 }

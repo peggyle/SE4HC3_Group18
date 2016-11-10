@@ -27,10 +27,10 @@
             </Button.Effect>
         </Button>
 
-        <TextBlock x:Name="errorMsgWrongPIN" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please enter correct PIN."/></TextBlock>
+        <TextBlock x:Name="errorMsgWrongPIN" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Width="400"  Foreground="Red" TextWrapping="Wrap" TextAlignment="Center">
+            <Run Text="Please enter the correct PIN."/></TextBlock>
 
-        <TextBlock x:Name="errorMsgWrongNum" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+        <TextBlock x:Name="errorMsgWrongNum" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Width="400" Foreground="Red" TextWrapping="Wrap" TextAlignment="Center">
             <Run Text="Please enter four digits."/></TextBlock>
 
         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">

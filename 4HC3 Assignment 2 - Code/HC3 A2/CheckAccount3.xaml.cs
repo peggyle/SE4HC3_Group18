@@ -35,7 +35,7 @@ namespace HC3_A2
             bankNumberFlag = Convert.ToInt32(file.ReadLine());
             file.Close();
 
-            MessageBox.Show("Simulated printing of account statements");
+            MessageBox.Show("Simulated printing of account statements.");
         }
 
        

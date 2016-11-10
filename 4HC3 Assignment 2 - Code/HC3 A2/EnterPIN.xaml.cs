@@ -82,9 +82,17 @@ namespace HC3_A2
                     textBox3.Text = "";
                     textBox4.Text = "";
                     numWrong++;
-                    if (numWrong == 3)
+                    if (numWrong == 1)
                     {
-                        this.NavigationService.Navigate(new HC3_A2.InsertCard());
+                        errorMsgWrongPIN.Text = "Please enter the correct PIN. You have 2 more tries.";
+                    }
+                    else if (numWrong == 2)
+                    {
+                        errorMsgWrongPIN.Text = "Please enter the correct PIN. You have 1 more try.";
+                    }
+                    else if (numWrong == 3)
+                    {
+                        this.NavigationService.Navigate(new HC3_A2.WrongPIN(bankNumberFlag));
                     }
                 }
                     
