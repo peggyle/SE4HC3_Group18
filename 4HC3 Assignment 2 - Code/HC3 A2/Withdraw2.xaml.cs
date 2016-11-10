@@ -122,19 +122,16 @@ namespace HC3_A2
         private void ok_click(object sender, RoutedEventArgs e)
         {
             string amount = digitDisplay.Text;
-            double amount2 = Convert.ToDouble(amount.Substring(2));
-            string[] testAmount = amount.Split('.');
 
-            if (amount2 > balance)
-                // Higher amount than balance
-                errorMsgLimit.Visibility = Visibility.Visible;
-            else if (amount.Length <= 2)
+            if (amount.Length <= 2)
                 // Null
                 errorMsgValid.Visibility = Visibility.Visible;
+            else if (Convert.ToDouble(amount.Substring(2)) > balance)
+                // Higher amount than balance
+                errorMsgLimit.Visibility = Visibility.Visible;
             else
                 // Continue to confirm page
                 this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount, account));
-            
         }
     }
 }
