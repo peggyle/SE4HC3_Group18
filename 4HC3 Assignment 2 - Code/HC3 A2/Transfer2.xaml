@@ -30,8 +30,10 @@
             </Button.Effect>
         </Button>
 
-        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red"
-                   Text="Please enter a valid amount"/>
+        <TextBlock x:Name="errorMsgValid" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red"
+                   Text="Please enter a valid amount."/>
+        <TextBlock x:Name="errorMsgLimit" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,35" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red" TextWrapping="Wrap" Width="400" TextAlignment="Center"
+                   Text="Please enter an amount less than your balance."/>
 
         <TextBlock x:Name="amountLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" TextWrapping="Wrap" FontWeight="Bold" Text="Enter Amount:" FontSize="30" FontFamily="Arial"/>
         <TextBlock x:Name="amountLabel2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,210,0,0" TextWrapping="Wrap" Text="Amount:" FontSize="30" FontFamily="Arial" Visibility="Hidden"/>
