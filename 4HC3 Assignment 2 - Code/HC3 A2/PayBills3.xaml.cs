@@ -47,7 +47,8 @@ namespace HC3_A2
         }
 
         // Buttons
-        private void ok_click(object sender, RoutedEventArgs e) {
+        private void ok_click(object sender, RoutedEventArgs e)
+        {
             System.IO.StreamWriter file = new System.IO.StreamWriter("./Resources/userinfo.txt");
             file.WriteLine(bankNumber);
             file.WriteLine(pin);
@@ -56,15 +57,15 @@ namespace HC3_A2
             string account2 = toAccount.Split(' ')[0].ToLower();
             if (account1 == "chequing")
             {
-                balance1 = Convert.ToString(Convert.ToInt32(balance1) - Convert.ToInt32(amount.Substring(2)));
+                balance1 = Convert.ToString(Convert.ToDouble(balance1) - Convert.ToDouble(amount.Substring(2)));
             }
             else if (account1 == "savings")
             {
-                balance2 = Convert.ToString(Convert.ToInt32(balance2) - Convert.ToInt32(amount.Substring(2)));
+                balance2 = Convert.ToString(Convert.ToDouble(balance2) - Convert.ToDouble(amount.Substring(2)));
             }
             else if (account1 == "other")
             {
-                balance3 = Convert.ToString(Convert.ToInt32(balance3) - Convert.ToInt32(amount.Substring(2)));
+                balance3 = Convert.ToString(Convert.ToDouble(balance3) - Convert.ToDouble(amount.Substring(2)));
             }
 
             file.WriteLine(balance1);
@@ -74,7 +75,8 @@ namespace HC3_A2
             // Continue to success page
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
         }
-        private void back_click(object sender, RoutedEventArgs e) {
+        private void back_click(object sender, RoutedEventArgs e)
+        {
             // Return to amount selection page
             this.NavigationService.Navigate(new HC3_A2.PayBills2(fromAccount, toAccount));
         }

@@ -39,7 +39,7 @@ namespace HC3_A2
 
             this.amount = amount;
             this.account = account;
-            numberLabel.Text = String.Format("{0:C2}", Convert.ToInt32(amount.Substring(1)));
+            numberLabel.Text = String.Format("{0:C2}", Convert.ToDouble(amount.Substring(2)));
             accountLabel.Text = account;
             /*
             if (account == "chequing")
@@ -73,25 +73,25 @@ namespace HC3_A2
             file.WriteLine(bankNumber);
             file.WriteLine(pin);
 
-            int newAmount = 0;
-            if (account == "chequing")
+            string accountString = account.Split(' ')[0].ToLower();
+
+            if (accountString == "chequing")
             {
-                newAmount = Convert.ToInt32(balance1) - Convert.ToInt32(amount.Substring(1));
-                file.WriteLine(Convert.ToString(newAmount));
+                file.WriteLine(Convert.ToDouble(balance1) - Convert.ToDouble(amount.Substring(2)));
                 file.WriteLine(balance2);
                 file.WriteLine(balance3);
             }
-            else if (account == "savings")
+            else if (accountString == "savings")
             {
                 file.WriteLine(balance1);
-                file.WriteLine(Convert.ToInt32(balance2) - Convert.ToInt32(amount.Substring(1)));
+                file.WriteLine(Convert.ToDouble(balance2) - Convert.ToDouble(amount.Substring(2)));
                 file.WriteLine(balance3);
             }
-            else if (account == "other")
+            else if (accountString == "other")
             {
                 file.WriteLine(balance1);
                 file.WriteLine(balance2);
-                file.WriteLine(Convert.ToInt32(balance3) - Convert.ToInt32(amount.Substring(1)));
+                file.WriteLine(Convert.ToDouble(balance3) - Convert.ToDouble(amount.Substring(2)));
             }
             file.Close();
             this.NavigationService.Navigate(new HC3_A2.WithdrawDeposit4());
