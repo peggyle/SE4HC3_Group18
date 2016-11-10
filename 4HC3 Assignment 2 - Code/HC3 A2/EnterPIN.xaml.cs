@@ -27,19 +27,11 @@ namespace HC3_A2
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
-
-            string text = digitDisplay.Text;
-
-            if (text.Length > 0 && text.Length == 4 )
-            {
-                this.NavigationService.Navigate(new HC3_A2.MainPage());
-            }
+            if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBox3.Text.Length == 0 || textBox4.Text.Length == 0)
+                errorMsg.Visibility = Visibility.Visible;
 
             else
-                errorMsg.Visibility = Visibility.Visible; 
-
-
-            ;
+                this.NavigationService.Navigate(new HC3_A2.MainPage());
         }
         private void back_click(object sender, RoutedEventArgs e)
         {
@@ -51,17 +43,47 @@ namespace HC3_A2
         private void number_click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            switch (button.CommandParameter.ToString())
-            {
-                case "BACK":
-                    if (digitDisplay.Text.Length > 2)
-                        digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
-                    break;
 
-                default:
-                    digitDisplay.Text += button.Content.ToString();
-                    break;
+            if (button.CommandParameter.ToString() == "BACK")
+            {
+                if (textBox4.Text.Length > 0) textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
+                else if (textBox3.Text.Length > 0) textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+                else if (textBox2.Text.Length > 0) textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                else if (textBox1.Text.Length > 0) textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+                /*
+                else
+                {
+                    MessageBox.Show("No more to delete",
+               "Important Message");
+                }
+                */
             }
+            else if (textBox1.Text.Length == 0)
+            {
+                // textBox1.Text += button.Content.ToString();
+                textBox1.Text += "♦";
+            }
+            else if (textBox2.Text.Length == 0)
+            {
+                // textBox2.Text += button.Content.ToString();
+                textBox2.Text += "♦";
+            }
+            else if (textBox3.Text.Length == 0)
+            {
+                // textBox3.Text += button.Content.ToString();
+                textBox3.Text += "♦";
+            }
+            else if (textBox4.Text.Length == 0)
+            {
+                // textBox4.Text += button.Content.ToString();
+                textBox4.Text += "♦";
+            }
+            /*
+            else
+            {
+                MessageBox.Show("PIN can only be 4 digits.", "Message");
+            }
+            */
         }
 
         private void buttonPressed(object sender, RoutedEventArgs e)
