@@ -20,9 +20,18 @@ namespace HC3_A2
     /// </summary>
     public partial class deposit : Page
     {
+        List<string> accountOptions;
+
         public deposit()
         {
             InitializeComponent();
+
+            accountOptions = new List<string>();
+            accountOptions.Add("SAVINGS ACCOUNT 123654128 - $2000.00");
+            accountOptions.Add("CHEQUING ACCOUNT 4645516846 - $30000.00");
+            accountOptions.Add("OTHER ACCOUNT 678456484 - $2554.00");
+
+            comboBox.ItemsSource = accountOptions;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,9 +43,9 @@ namespace HC3_A2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
-            
-            
+            Object account = comboBox.SelectedValue;
+
+            /*
             if (comboBox.SelectedItem == saving)
             {
                 this.NavigationService.Navigate(new HC3_A2.Dsaving());
@@ -52,12 +61,13 @@ namespace HC3_A2
             {
                 this.NavigationService.Navigate(new HC3_A2.Dother());
             }
-
-
-            else 
-
-            errorMsg.Visibility = Visibility.Visible; 
+            */
+            if (account != null)
+                this.NavigationService.Navigate(new HC3_A2.deposit2(account.ToString()));
+            else
+                errorMsg.Visibility = Visibility.Visible;
         }
+
 
         private void back_Button(object sender, RoutedEventArgs e)
         {

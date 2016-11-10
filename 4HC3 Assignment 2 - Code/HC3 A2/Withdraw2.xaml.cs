@@ -20,13 +20,15 @@ namespace HC3_A2
     /// </summary>
     public partial class Withdraw2 : Page
     {
-        public Withdraw2()
+        private string account;
+
+        public Withdraw2(string account)
         {
             InitializeComponent();
+
+            this.account = account;
+            textLabel.Text = "Withdrawing from\n" + account;
         }
-
-   
-
 
         private void buttonPressed(object sender, RoutedEventArgs e)
         {
@@ -43,61 +45,22 @@ namespace HC3_A2
             b.RenderTransform = trans;
         }
 
-        private void delete_click(object sender, RoutedEventArgs e)
+
+        // Number pad
+        private void number_click(object sender, RoutedEventArgs e)
         {
-            display.Text = display.Text.Remove(display.Text.Length - 1);
+            Button button = sender as Button;
+            switch (button.CommandParameter.ToString())
+            {
+                case "BACK":
+                    if (digitDisplay.Text.Length > 2)
+                        digitDisplay.Text = digitDisplay.Text.Remove(digitDisplay.Text.Length - 1);
+                    break;
 
-        }
-
-
-        private void number1_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 1; 
-        }
-
-        private void number_2click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 2; 
-        }
-
-        private void number3_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 3; 
-        }
-
-        private void number4_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 4; 
-        }
-
-        private void number5_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 5; 
-        }
-
-        private void number6_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 6; 
-        }
-
-        private void number7_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 7; 
-        }
-
-        private void number8_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 8; 
-        }
-
-        private void number9_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 9; 
-        }
-
-        private void number0_click(object sender, RoutedEventArgs e)
-        {
-            display.Text = display.Text + 0; 
+                default:
+                    digitDisplay.Text += button.Content.ToString();
+                    break;
+            }
         }
 
         private void back_click(object sender, RoutedEventArgs e)
@@ -108,10 +71,10 @@ namespace HC3_A2
 
         private void ok_click(object sender, RoutedEventArgs e)
         {
-            if (display.Text.Length > 0)
+            if (digitDisplay.Text.Length > 2)
             {
-                string amount = display.Text;
-                this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount,"chequing"));
+                string amount = digitDisplay.Text;
+                this.NavigationService.Navigate(new HC3_A2.Withdraw3(amount, account));
             }
 
             else

@@ -14,9 +14,9 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Withdraw"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-         <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,156,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose an account:"/>
-
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="641" FontSize="28" SelectionChanged="comboBox_SelectionChanged">
+        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,156,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose an account:"/>
+        
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="75,272,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="641" Height="60" FontSize="20" FontFamily="Arial" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem x:Name="chequing"  Content="CHEQUING ACCOUNT - 4645516846 - $30,000.00" HorizontalAlignment="Left" Width="631" Selected="ComboBoxItem_Selected"/>
             <ComboBoxItem x:Name="saving"   Content="SAVINGS ACCOUNT - 123654128 - $2,000.00" HorizontalAlignment="Left" Width="631" Selected="ComboBoxItem_Selected_1"/>
             <ComboBoxItem x:Name="other" Content="OTHER ACCOUNT - 678456484 - $2,554.00 " HorizontalAlignment="Left" Width="635" Selected="ComboBoxItem_Selected_2"/>
@@ -30,7 +30,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="Button_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="okButton" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="Button_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

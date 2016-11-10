@@ -20,9 +20,14 @@ namespace HC3_A2
     /// </summary>
     public partial class deposit2 : Page
     {
-        public deposit2()
+        string account;
+
+        public deposit2(string account)
         {
             InitializeComponent();
+
+            this.account = account;
+            textLabel.Text = "Depositing into\n" + account;
         }
 
         private void back_Button(object sender, RoutedEventArgs e)

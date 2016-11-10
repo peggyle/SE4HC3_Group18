@@ -14,7 +14,7 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Withdraw"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Enter your amount "  Margin="0,167,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,110,0,0" FontSize="28" FontFamily="Arial" FontWeight="Bold" Text="Choose amount"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
@@ -27,7 +27,12 @@
             </Button.Effect>
         </Button>
 
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,240,0,0">
+
+        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
+            <Run Text="Please enter"/><LineBreak/><Run Text="a valid amount"/></TextBlock>
+
+        <TextBlock x:Name="amountLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,200,0,0" TextWrapping="Wrap" Text="Amount:" FontSize="30" FontFamily="Arial"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,190,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
@@ -42,52 +47,54 @@
                 <ColumnDefinition Width="95"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Margin="0,0,0,45" FontSize="30" FontFamily="Arial" Visibility="Hidden" Foreground="Red">
-            <Run Text="Please Enter Amount"/></TextBlock>
-
-
             <Grid Grid.ColumnSpan="3">
                 <Border BorderThickness="1" BorderBrush="Black">
-                    <TextBlock Name="display" Text="$" TextAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial"/>
+                    <TextBlock Name="digitDisplay" TextAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial" Text="$ "/>
                 </Border>
             </Grid>
             <Grid Grid.Column="3">
-                <Button CommandParameter="BACK" Click="delete_click" HorizontalAlignment="Left" Margin="0,0,-0.333,0" Width="95">
+                <Button CommandParameter="BACK" Click="number_click">
                     <Path Stretch="Fill" Width="36" Height="24" Data="F1M555.0371,274.4893L552.7871,276.7383L549.9861,273.9373L547.1991,276.7243L545.1131,274.6393L547.9001,271.8523L545.0101,268.9603L547.2601,266.7113L550.1501,269.6023L552.8921,266.8613L554.9761,268.9463L552.2361,271.6883z M555.3751,264.0003L544.8751,264.0003C543.1251,264.1253,535.0001,270.7503,535.0001,272.2503C535.0001,273.7503,543.1251,279.3753,544.8751,279.5003L555.3751,279.5003C558.8751,279.5003,559.3751,277.7093,559.3751,275.5003L559.3751,268.0003C559.3751,265.7913,558.7501,264.0003,555.3751,264.0003" Fill="#FF333333"/>
                 </Button>
             </Grid>
             <Grid Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD1" Click="number1_click" FontSize="30" FontFamily="Arial">1</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD1" Click="number_click" FontSize="30" FontFamily="Arial">1</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD2" Click="number_2click" FontSize="30" FontFamily="Arial">2</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD2" Click="number_click" FontSize="30" FontFamily="Arial">2</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD3" Click="number3_click" FontSize="30" FontFamily="Arial">3</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD3" Click="number_click" FontSize="30" FontFamily="Arial">3</Button>
             </Grid>
             <Grid Grid.Row="2">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD4" Click="number4_click" FontSize="30" FontFamily="Arial">4</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD4" Click="number_click" FontSize="30" FontFamily="Arial">4</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD5" Click="number5_click" FontSize="30" FontFamily="Arial">5</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD5" Click="number_click" FontSize="30" FontFamily="Arial">5</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="2">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD6" Click="number6_click" FontSize="30" FontFamily="Arial">6</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD6" Click="number_click" FontSize="30" FontFamily="Arial">6</Button>
             </Grid>
             <Grid  Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD7" Click="number7_click" FontSize="30" FontFamily="Arial">7</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD7" Click="number_click" FontSize="30" FontFamily="Arial">7</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD8" Click="number8_click" FontSize="30" FontFamily="Arial">8</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD8" Click="number_click" FontSize="30" FontFamily="Arial">8</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="3">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD9" Click="number9_click" FontSize="30" FontFamily="Arial">9</Button>
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD9" Click="number_click" FontSize="30" FontFamily="Arial">9</Button>
             </Grid>
-            <Grid Grid.ColumnSpan="3" Grid.Row="4">
-                <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number0_click" FontSize="30" FontFamily="Arial">0</Button>
+            <Grid Grid.ColumnSpan="2" Grid.Row="4">
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD0" Click="number_click" FontSize="30" FontFamily="Arial">0</Button>
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="4">
+                <Button Background="WhiteSmoke" CommandParameter="NUMPAD." Click="number_click" FontSize="30" FontFamily="Arial">.</Button>
             </Grid>
         </Grid>
-        <TextBlock x:Name="titleLabel_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Chequing Account"  Margin="27,109,0,0" FontSize="36" FontFamily="Arial" Foreground="Black" FontStyle="Italic"/>
 
+        <!--
+        <TextBlock x:Name="titleLabel_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Chequing Account"  Margin="27,109,0,0" FontSize="36" FontFamily="Arial" Foreground="Black" FontStyle="Italic"/>
+        -->
+        
     </Grid>
 </Page>

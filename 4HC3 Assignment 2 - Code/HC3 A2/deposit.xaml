@@ -16,10 +16,12 @@
 
         <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,156,0,0" FontSize="30" FontFamily="Arial" FontWeight="Bold" Text="Choose an account:"/>
 
-        <ComboBox x:Name="comboBox"  HorizontalAlignment="Left" Margin="75,272,0,0" VerticalAlignment="Top" Width="641" Height="58" FontSize="20" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="75,272,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="641" Height="60" FontSize="20" FontFamily="Arial">
+            <!--
             <ComboBoxItem x:Name="saving"  Content="SAVEING ACCOUNT  123654128  Balance $2000.00" HorizontalAlignment="Left" Width="631" Selected="saving_Selected"/>
             <ComboBoxItem x:Name="chequing" Content="CHEQUING ACCOUNT  4645516846  Balance $30000.00" HorizontalAlignment="Left" Width="631" Selected="ComboBoxItem_Selected"/>
             <ComboBoxItem x:Name="other" Content="OTHER ACCOUNT  678456484  Balance $2554.00 " HorizontalAlignment="Left" Width="635" Selected="other_Selected"/>
+            -->
         </ComboBox>
 
 
@@ -31,7 +33,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="Button_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
+        <Button x:Name="okButton" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,50"  Width="120" Height="60" Click="Button_Click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

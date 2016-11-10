@@ -52,17 +52,19 @@ namespace HC3_A2
 
             if (comboBox.SelectedItem == saving)
             {
-                this.NavigationService.Navigate(new HC3_A2.Wsaving());
+                //this.NavigationService.Navigate(new HC3_A2.Wsaving());
+                this.NavigationService.Navigate(new HC3_A2.Withdraw2(saving.Content.ToString()));
             }
 
             if (comboBox.SelectedItem == chequing)
             {
-                this.NavigationService.Navigate(new HC3_A2.Withdraw2());
+                this.NavigationService.Navigate(new HC3_A2.Withdraw2(chequing.Content.ToString()));
             }
 
             if (comboBox.SelectedItem == other)
             {
-                this.NavigationService.Navigate(new HC3_A2.Wother());
+                //this.NavigationService.Navigate(new HC3_A2.Wother());
+                this.NavigationService.Navigate(new HC3_A2.Withdraw2(other.Content.ToString()));
             }
 
             else

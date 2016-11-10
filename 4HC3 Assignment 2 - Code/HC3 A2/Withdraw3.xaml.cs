@@ -39,7 +39,9 @@ namespace HC3_A2
 
             this.amount = amount;
             this.account = account;
-            numberLabel.Text = String.Format("{0:C2}", Convert.ToInt32(amount.Substring(1))); 
+            numberLabel.Text = String.Format("{0:C2}", Convert.ToInt32(amount.Substring(1)));
+            accountLabel.Text = account;
+            /*
             if (account == "chequing")
             {
                 accountLabel.Text = "Chequing Account";
@@ -52,7 +54,7 @@ namespace HC3_A2
             {
                 accountLabel.Text = "Other Account";
             }
-            
+            */
         }
 
         private void Frame_Navigated(object sender, NavigationEventArgs e)
@@ -62,7 +64,7 @@ namespace HC3_A2
 
         private void back_click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HC3_A2.Withdraw2());
+            this.NavigationService.Navigate(new HC3_A2.Withdraw2(account));
         }
 
         private void ok_click(object sender, RoutedEventArgs e)
