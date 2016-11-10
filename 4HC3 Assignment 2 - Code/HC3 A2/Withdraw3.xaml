@@ -14,7 +14,7 @@
         <TextBlock x:Name="bankingLabel" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Banking"  Margin="0,55,15,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" Foreground="White"/>
         <TextBlock x:Name="titleLabel" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Confirmation"  Margin="15,15,0,0" FontSize="50" FontFamily="Arial" Foreground="White"/>
 
-        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="204,167,169,0" FontSize="36" FontFamily="Arial" FontWeight="Bold" Text="  Amount withdraw is" Height="67" Width="427"/>
+        <TextBlock x:Name="textLabel" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,150,0,0" FontSize="36" FontFamily="Arial" FontWeight="Bold" Text="Amount to withdraw is:"/>
 
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,0,0,50"  Width="120" Height="60" Click="back_click" FontSize="25" FontFamily="Arial" PreviewMouseDown="buttonPressed" PreviewMouseUp="buttonReleased">
             <Button.Effect>
@@ -27,6 +27,8 @@
             </Button.Effect>
         </Button>
 
-        <TextBlock x:Name="numberLabel" HorizontalAlignment="Left" Margin="222,285,100,100" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="36" Width="295" FontFamily="Segoe WP"/>
+        <TextBlock x:Name="numberLabel" HorizontalAlignment="Center" Margin="0,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Segoe WP" FontSize="40"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,300,0,0" FontSize="36" FontFamily="Arial" FontWeight="Bold" Text="from:"/>
+        <TextBlock x:Name="accountLabel" HorizontalAlignment="Center" Margin="0,370,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Segoe WP" FontSize="40"/>
     </Grid>
 </Page>

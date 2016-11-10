@@ -20,9 +20,23 @@ namespace HC3_A2
     /// </summary>
     public partial class Withdraw1 : Page
     {
+        string bankNumber, pin;
+        int balance1, balance2, balance3;
+
         public Withdraw1()
         {
             InitializeComponent();
+
+            System.IO.StreamReader file = new System.IO.StreamReader("./Resources/userinfo.txt");
+            bankNumber = file.ReadLine();
+            pin = file.ReadLine();
+            balance1 = Convert.ToInt32(file.ReadLine());
+            balance2 = Convert.ToInt32(file.ReadLine());
+            balance3 = Convert.ToInt32(file.ReadLine());
+
+            chequing.Content = String.Format("CHEQUING ACCOUNT - 4645516846 - {0:C2}", balance1);
+            saving.Content = String.Format("SAVINGS ACCOUNT - 123654128 - {0:C2}", balance2);
+            other.Content = String.Format("OTHER ACCOUNT - 678456484 - {0:C2}", balance3);
         }
 
 
