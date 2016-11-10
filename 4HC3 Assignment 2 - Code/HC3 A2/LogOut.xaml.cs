@@ -20,14 +20,23 @@ namespace HC3_A2
     /// </summary>
     public partial class LogOut : Page
     {
+        System.Windows.Threading.DispatcherTimer timer;
+        System.Windows.Threading.DispatcherTimer timerBeep;
+        System.Media.SoundPlayer beepSound;
+
         public LogOut()
         {
             InitializeComponent();
 
-            System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+            timer = new System.Windows.Threading.DispatcherTimer();
             timer.Tick += timerTick;
             timer.Interval = new TimeSpan(0, 0, 0, 0, 200);
             timer.Start();
+
+            timerBeep = new System.Windows.Threading.DispatcherTimer();
+            timerBeep.Tick += timerBeepTick;
+            timerBeep.Interval = new TimeSpan(0, 0, 0, 0, 500);
+            timerBeep.Start();
 
             System.Windows.Media.Animation.DoubleAnimation anim = new System.Windows.Media.Animation.DoubleAnimation();
             anim.From = 0;
@@ -56,8 +65,16 @@ namespace HC3_A2
             blink = !blink;
         }
 
+        private void timerBeepTick(object sender, EventArgs e)
+        {
+            beepSound = new System.Media.SoundPlayer(Properties.Resources.beep_10);
+            beepSound.Play();
+        }
+
         private void insertCardClick(object sender, RoutedEventArgs e)
         {
+            timer.Stop();
+            timerBeep.Stop();
             this.NavigationService.Navigate(new HC3_A2.InsertCard());
         }
     }

@@ -22,7 +22,7 @@ namespace HC3_A2.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace HC3_A2.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HC3_A2.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace HC3_A2.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace HC3_A2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Arrow_down {
+        internal static System.Drawing.Bitmap Arrow_down {
             get {
                 object obj = ResourceManager.GetObject("Arrow_down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace HC3_A2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Arrow_up {
+        internal static System.Drawing.Bitmap Arrow_up {
             get {
                 object obj = ResourceManager.GetObject("Arrow_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace HC3_A2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 20161110.
         /// </summary>
-        public static string bankNumber {
+        internal static string bankNumber {
             get {
                 return ResourceManager.GetString("bankNumber", resourceCulture);
             }
@@ -92,16 +92,25 @@ namespace HC3_A2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        public static System.IO.UnmanagedMemoryStream Beep {
+        internal static System.IO.UnmanagedMemoryStream Beep {
             get {
                 return ResourceManager.GetStream("Beep", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream beep_10 {
+            get {
+                return ResourceManager.GetStream("beep_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Insert_card {
+        internal static System.Drawing.Bitmap Insert_card {
             get {
                 object obj = ResourceManager.GetObject("Insert_card", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -111,18 +120,21 @@ namespace HC3_A2.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 2016.
         /// </summary>
-        public static string pin {
+        internal static string pin {
             get {
                 return ResourceManager.GetString("pin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 20161110
+        ///   Looks up a localized string similar to 201611101234
         ///2016
-        ///2000.
+        ///2000
+        ///30000
+        ///2554
+        ///0.
         /// </summary>
-        public static string userinfo {
+        internal static string userinfo {
             get {
                 return ResourceManager.GetString("userinfo", resourceCulture);
             }
